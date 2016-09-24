@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Est的小窝">
+    <title>使用node.js + koa2搭建RESTful API - Est的小窝</title>
+    <meta name="author" content="Est">
+    
+    
+        <link rel="icon" href="codeest.cn/assets/images/kaede-avatar-k-50.png">
+    
+    
+    <meta name="description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="使用node.js + koa2搭建RESTful API">
+<meta property="og:url" content="codeest.cn/2016/09/21/web-api-code/index.html">
+<meta property="og:site_name" content="Est的小窝">
+<meta property="og:description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_0.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_1.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_1.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_2.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_3.png">
+<meta property="og:updated_time" content="2016-09-24T15:09:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用node.js + koa2搭建RESTful API">
+<meta name="twitter:description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
+<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_0.png">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="codeest.cn/assets/images/my_avatar.png"/>
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/thumbnail2.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/thumbnail2.jpg" />
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-ldisisvx4xbfoppj6vdklmat7ab08yb9zh7lusydx0h9ucik3cgkg1glxbyq.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Est的小窝</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/my_avatar.png"/>
+            </a>
+            <span class="sidebar-profile-name">Est</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-circle-thin"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-star-o"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-terminal"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/codeestX" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:codeest.dev@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img.jpg');"
+             data-behavior="3">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            使用node.js + koa2搭建RESTful API
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Wed Sep 21 2016 20:25:50 GMT+0800">
+	
+		    Sep 21, 2016
+    	
+    </time>
+    
+        <span>IN </span>
+        
+    <a class="category-link" href="/categories/Web/">Web</a>
+
+
+    
+</div>
+</div>
+            
+        </div>
+
+            <div id="main" data-behavior="3"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></p>
+<h1 id="1-选择语言与框架"><a href="#1-选择语言与框架" class="headerlink" title="1.选择语言与框架"></a>1.选择语言与框架</h1><p></p><p>考虑了3款比较热门的后端语言，PHP，JavaScript（node.js），Python，打算从中选择一款，分别比较了它们的特点，最后选定了用node.js来开发，原因有3点：<br><br>1.js目前比较泛用，本身既能写Web前端，又能通过node.js来写后端，还能通过ReactNative来写移动端，真的是居家旅行必备2333<br>2.node.js搭建的服务端在性能上很出色<br>3.我本人也对Web开发很感兴趣QwQ</p><br>然后就是框架的选择了，node.js的web框架主流的选择有express和koa，koa算是express的进化版，技术还是新的好~ koa!就决定是你了╮(￣▽￣)╭<p></p>
+<h1 id="2-编写node-js代码"><a href="#2-编写node-js代码" class="headerlink" title="2.编写node.js代码"></a>2.编写node.js代码</h1><p>这部分的内容还是比较多的，更推荐看专业的教程，推荐廖雪峰老师的JavaScript教程中的node.js部分，最后会手把手教你使用node.js构筑基于koa2的MVC架构的RESTful API项目，可以去下载demo扩展成满足自己项目需要的API<br></p>
+<p><big><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000" target="_blank" rel="external">教程地址</a></p></big><br>我写的简易<a href="https://github.com/codeestX/my-restful-api" target="_blank" rel="external">RESTful API demo</a>如下<br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_0.png" alt=""></p>
+<h1 id="3-分析API类型"><a href="#3-分析API类型" class="headerlink" title="3.分析API类型"></a>3.分析API类型</h1><p>常见的API类型有GET、POST、DELETE、PUT，这几种类型的写法在廖老师的教程中都有涉及，其中GET通常又分为3种类型：</p>
+<ul>
+<li>返回Json</li>
+<li>返回图片资源</li>
+<li>返回用于下载的文件</li>
+</ul>
+<p>教程中没有划分这几种GET类型，我在自己的demo中分别实践了一遍</p>
+<h3 id="3-1-返回Json"><a href="#3-1-返回Json" class="headerlink" title="3.1 返回Json"></a>3.1 返回Json</h3><p>这种类型最常用，直接返回可以转化为实体类的Json结构体<br>koa中type类型定义为<code>application/json</code> body直接传入一个对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /api/geeknews/version'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(&#123;</div><div class="line">        	<span class="attr">code</span>: version.getVersionCode(),</div><div class="line">        	<span class="attr">des</span>: version.getVersionDes()</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/json'</span>;</div><div class="line">                    ctx.response.body = &#123;</div><div class="line">                        <span class="attr">code</span>: <span class="number">200</span>,</div><div class="line">                        <span class="attr">message</span>: <span class="string">''</span>,</div><div class="line">                        <span class="attr">data</span>: data</div><div class="line">                    &#125;;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_1.png" alt=""></p>
+<h3 id="3-2-返回图片资源"><a href="#3-2-返回图片资源" class="headerlink" title="3.2 返回图片资源"></a>3.2 返回图片资源</h3><p>这种类型在Android端多用于Glide、Picasso等框架加载图片<br>koa中type类型定义为<code>.jpg</code>（也可以是其他图片类型） body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /img/test.jpg'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(imgPath)</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'.jpg'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_1.png" alt=""></p>
+<h3 id="3-3-返回用于下载的文件"><a href="#3-3-返回用于下载的文件" class="headerlink" title="3.3 返回用于下载的文件"></a>3.3 返回用于下载的文件</h3><p>这种类型在Android端多用于更新apk包，下载配置文件等<br>koa中type类型定义为<code>application/octet-stream</code> body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /apk/geeknews.apk'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(filePath)</div><div class="line">        );</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/octet-stream'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_2.png" alt=""><br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_3.png" alt=""></p>
+<p>这篇文章主要的目的在于让大家少走弯路，具体代码还是需要去参考上面列出的教程和demo，掌握了之后自己写一些简单的RESTful API还是很轻松的(´・ω・`)</p>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/api/">api</a> <a class="tag tag--primary tag--small t-link" href="/tags/node-js/">node.js</a> <a class="tag tag--primary tag--small t-link" href="/tags/web/">web</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/24/web-api/"  data-tooltip="将node.js编写的API部署到服务器">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/" data-tooltip="Hello, Blog">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/09/21/web-api-code/"
+     data-title="使用node.js + koa2搭建RESTful API" data-url="codeest.cn/2016/09/21/web-api-code/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Est. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/24/web-api/"  data-tooltip="将node.js编写的API部署到服务器">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/" data-tooltip="Hello, Blog">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=codeest.cn/2016/09/21/web-api-code/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/my_avatar.png"/>
+        
+            <h4 id="about-card-name">Est</h4>
+        
+            <h5 id="about-card-bio"><p>Coder &amp; ACGer</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android Develper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                上海
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/scrip-etbs9ltowxjfrfwjqc9fnsdu8node3fxlfu249muxixlwkwgdegzpi5vtzvk.min.js"></script>
+<!--SCRIPTS END-->
+<!--PANGU AUTO SPACE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
+<!--PANGU AUTO SPACE END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'codeest'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
+    </script>
+
+
+</html>
