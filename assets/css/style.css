@@ -3902,7 +3902,7 @@ a.fancybox {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000; }
   .post-header-cover .post-header {
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle; }
     .post-header-cover .post-header .post-title {
       max-width: 850px;
@@ -3920,7 +3920,8 @@ a.fancybox {
       font-weight: 400;
       letter-spacing: 0.05em;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 3 auto; }
       .post-header-cover .post-header .post-meta a {
         color: white; }
 
