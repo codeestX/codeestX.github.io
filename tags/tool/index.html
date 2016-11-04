@@ -30,7 +30,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-i8qpxsb3etegdaoaqmzgbzvx4vptx1tbpw6xrkaye3u0iylwzdngm0dfd5xl.min.css">
+    <link rel="stylesheet" href="/assets/css/style-hhbkzx7m2eopk9b2iviwlxv0nyrx5f422pi2dakkybuq4ao3ixfksgjukhfn.min.css">
     <!--STYLES END-->
     
     
@@ -283,10 +283,11 @@
             Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>.
             Theme - <a href="https://github.com/kaedea/hexo-theme-themia">Themia</a>.<br>
             <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors.</span>
-            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span><br>
-            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>
+            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span>
+            <span id="times"></span><br>
+            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>.
         </p>
-        Copyrights &copy; 2016 Est. All Rights Reserved.
+        Copyrights &copy; 2016 Est. All Rights Reserved.٩(ˊᗜˋ*)و
     </span>
 </footer>
 
@@ -335,7 +336,7 @@
 <div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/assets/js/scrip-arbakd37w4isuzmn9unqxubk1gmqbbz7bckr7blvuxxabywmqlko5h65lz4v.min.js"></script>
+<script src="/assets/js/scrip-i4rrxpuhx4sdxtl2soz5pwnostrjlxoebavxl9xy2vm4mskim0zyqxfrxv2h.min.js"></script>
 <!--SCRIPTS END-->
 <!--BUSUANZI-->
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
@@ -355,5 +356,14 @@
         _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
     </script>
 
+    <script language=javascript>
+        function show_date_time()
+        {
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay = new Date("9/11/2016 0:00:00");today=new Date();timeold=(today.getTime() - BirthDay.getTime());sectimeold=timeold/1000;secondsold=Math.floor(sectimeold);msPerDay=24*60*60*1000;e_daysold=timeold/msPerDay;daysold=Math.floor(e_daysold); e_hrsold=(e_daysold-daysold)*24;hrsold=Math.floor(e_hrsold); e_minsold=(e_hrsold-hrsold)*60; minsold=Math.floor((e_hrsold-hrsold)*60); seconds=Math.floor((e_minsold-minsold)*60);
+            times.innerHTML="<span>Blog age:"+daysold+ " day " +hrsold+" h "+minsold+" m "+seconds+" s."+"</span>";
+        }
+        show_date_time();
+    </script>
 
 </html>
