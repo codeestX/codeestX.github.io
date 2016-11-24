@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Est的小窝">
+    <title>折腾博客 - Est的小窝</title>
+    <meta name="author" content="Est">
+    
+    
+        <link rel="icon" href="codeest.moe/assets/images/kaede-avatar-k-50.png">
+    
+    
+    <meta name="description" content="前段时间把博客大致折腾成了自己喜欢的样子，在这记录下吧">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="折腾博客">
+<meta property="og:url" content="codeest.moe/2016/11/23/web-hexo/index.html">
+<meta property="og:site_name" content="Est的小窝">
+<meta property="og:description" content="前段时间把博客大致折腾成了自己喜欢的样子，在这记录下吧">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_hexo_0.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_hexo_1.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_hexo_2.png">
+<meta property="og:updated_time" content="2016-11-24T17:11:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="折腾博客">
+<meta name="twitter:description" content="前段时间把博客大致折腾成了自己喜欢的样子，在这记录下吧">
+<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/web_hexo_0.png">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="codeest.moe/assets/images/my_avatar.png"/>
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/thumbnail4.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/thumbnail4.png" />
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-783lbdtnnn7mrnghx0bwkdd6btk4zqinzzsw47vmkrkxfwqhizvxpmukt6ui.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Est的小窝</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/my_avatar.png"/>
+            </a>
+            <span class="sidebar-profile-name">Estの小窝</span>
+            <span class="sidebar-profile-motto">Coder & ACGer</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-circle-thin"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-star-o"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-terminal"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/codeestX" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:codeest.dev@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-mars"></i>
+                    <span class="sidebar-button-desc">Friends</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-flask"></i>
+                    <span class="sidebar-button-desc">Project</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-dollar"></i>
+                    <span class="sidebar-button-desc">Donate</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img.jpg');"
+             data-behavior="3">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            折腾博客
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Wed Nov 23 2016 01:02:27 GMT+0800">
+	
+		    Nov 23, 2016
+    	
+    </time>
+    
+        <span>IN </span>
+        
+    <a class="category-link" href="/categories/Web/">Web</a>
+
+
+    
+</div>
+
+    <h1 class="post-meta">
+    <br>
+            <span id="busuanzi_container_page_pv">View <span id="busuanzi_value_page_pv"></span> times.</span>
+    </h1>
+</div>
+
+            
+        </div>
+
+            <div id="main" data-behavior="3"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></p>
+<h1 id="选择博客框架"><a href="#选择博客框架" class="headerlink" title="选择博客框架"></a>选择博客框架</h1><p>现在主流的博客框架有hexo, jeklly, WordPress三款，其中WordPress应该算是功能最强大的，自带MySQL数据库，数量众多的插件和主题，支持自定义各种侧边小控件，还有一个图形化界面管理后台，但是不像前两者可以方便的搭在GithubPages上，需要自己买台服务器提供空间，而且对markdown的支持貌似也不如前两者好。至于hexo和jeklly在特点上几乎没什么区别，只是一个基于nodejs一个基于ruby，都很轻量级，性能好速度快，近年来很火。</p>
+<p>在分别尝试了用<a href="https://github.com/DIYgod/Amativeness" target="_blank" rel="external">Amativeness</a>主题配合WordPress建站和用<a href="https://github.com/kaedea/hexo-theme-themia" target="_blank" rel="external">Themia</a>主题配合Hexo建站后最后还是选择了后者，搭建完成发现还少了不少东西，需要继续折腾。</p>
+<h1 id="多说"><a href="#多说" class="headerlink" title="多说"></a>多说</h1><p><a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>是国内知名的网站第三方评论系统，Themia基于的tranquilpeak主题中已经集成了多说，直接把申请到的key填入就可以生效了。但是没有做任何处理的默认的主题样式很一般…而且和Themia的风格也不怎么搭，不折腾一下能忍咩？好在多说支持自定义css属性，那就好办了，这里是<a href="http://dev.duoshuo.com/docs/4ff1cfd0397309552c000017" target="_blank" rel="external">自定义样式文档</a></p>
+<p>直接分享下我的评论栏的css代码吧</p>
+<ul>
+<li><code>圆形头像与鼠标悬浮旋转</code>  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#ds-reset .ds-avatar img &#123;</div><div class="line">    width:54px;height:54px;</div><div class="line">    margin-right: 12px;</div><div class="line">    border-radius: 27px;</div><div class="line">    -webkit-border-radius: 27px;    </div><div class="line">    -moz-border-radius:27px;</div><div class="line">    box-shadow: inset 0 -1px 0 #3333sf;</div><div class="line">    -webkit-box-shadow: inset 0 -1px 0 #3333sf;</div><div class="line">    -webkit-transition: 0.4s;   </div><div class="line">    -webkit-transition: -webkit-transform 0.4s ease-out;</div><div class="line">    transition: transform 0.4s ease-out;</div><div class="line">    -moz-transition: -moz-transform 0.4s ease-out;&#125;</div><div class="line"></div><div class="line">#ds-reset .ds-avatar img:hover&#123;    </div><div class="line">box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);</div><div class="line">    -webkit-box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);</div><div class="line">    transform: rotateZ(360deg);</div><div class="line">    -webkit-transform: rotateZ(360deg);</div><div class="line">    -moz-transform: rotateZ(360deg);&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>右侧的背景图片 url地址换成你的外链图片</code>  </li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-tag">textarea</span> &#123;<span class="attribute">background</span>:<span class="built_in">url</span>(http://odck16ake.bkt.clouddn.com/duoshuo.png) no-repeat right bottom <span class="meta">!important</span>; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>边框和按钮变圆角，设置背景色</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> &#123;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">3px</span> <span class="number">3px</span> <span class="number">0px</span> <span class="number">0px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#F4F6F7</span>;&#125;</div><div class="line">	</div><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-options</span> &#123;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">3px</span>;&#125;</div></pre></td></tr></table></figure>
+<p>把上面的代码直接粘贴到多说后台自定义css中保存即可。到这里还没有结束，接下来还要给评论加上操作系统和浏览器信息，继续：</p>
+<ul>
+<li><code>添加样式</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span><span class="selector-class">.this_ua</span> &#123;<span class="attribute">background-color</span>: <span class="number">#ccc</span><span class="meta">!important</span>;<span class="attribute">border-radius</span>: <span class="number">4px</span>;<span class="attribute">padding</span>: <span class="number">0</span> <span class="number">5px</span><span class="meta">!important</span>;<span class="attribute">margin</span>: <span class="number">0</span> <span class="number">1px</span><span class="meta">!important</span>;<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#BBB</span><span class="meta">!important</span>;<span class="attribute">color</span>: <span class="number">#fff</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Windows</span>&#123;<span class="attribute">background-color</span>: <span class="number">#39b3d7</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#46b8da</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Linux</span> &#123;<span class="attribute">background-color</span>: <span class="number">#3A3A3A</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#1F1F1F</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Android</span> &#123;<span class="attribute">background-color</span>: <span class="number">#00C47D</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#01B171</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Chrome</span>&#123;<span class="attribute">background-color</span>: <span class="number">#5cb85c</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#4cae4c</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Firefox</span>&#123;<span class="attribute">background-color</span>: <span class="number">#f0ad4e</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#eea236</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.IE</span>&#123;<span class="attribute">background-color</span>: <span class="number">#428bca</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#357ebd</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Opera</span>&#123;<span class="attribute">background-color</span>: <span class="number">#d9534f</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#d43f3a</span><span class="meta">!important</span>;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>找到你的博客中的多说js代码</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            <span class="keyword">var</span> duoshuoQuery = &#123;<span class="attr">short_name</span>:<span class="string">'codeest'</span>&#125;;</div><div class="line">            (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">                ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">                ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</div><div class="line">                ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">                (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</div><div class="line">                || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">                ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">                ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">                ds.src = <span class="string">'http://faisalman.github.io/ua-parser-js/src/ua-parser.js'</span>;</div><div class="line">                ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">      (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">            &#125;)();</div><div class="line">        &lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>在上面这段代码下面紧接着添加下面这段</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> DUOSHUO !== <span class="string">'undefined'</span>)hookDUOSHUO_tp();</div><div class="line">            <span class="keyword">else</span> $(<span class="string">'[src="http://static.duoshuo.com/embed.js"]'</span>)[<span class="number">0</span>].onload=hookDUOSHUO_tp;</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">hookDUOSHUO_tp</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">var</span> _D_post=DUOSHUO.templates.post</div><div class="line">                DUOSHUO.templates.post=<span class="function"><span class="keyword">function</span> (<span class="params">e,t</span>)</span>&#123;</div><div class="line">                    <span class="keyword">var</span> rs=_D_post(e,t);</div><div class="line">                    <span class="keyword">if</span>(e.post.agent&amp;&amp;<span class="regexp">/^Mozilla/</span>.test(e.post.agent))</div><div class="line">                        rs=rs.replace(<span class="regexp">/&lt;\/div&gt;&lt;p&gt;/</span>,show_ua(e.post.agent)+<span class="string">'&lt;/div&gt;&lt;p&gt;'</span>);</div><div class="line">                    <span class="keyword">return</span> rs;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">show_ua</span>(<span class="params">string</span>)</span>&#123;</div><div class="line">                $.ua.set(string);</div><div class="line">                <span class="keyword">var</span> sua=$.ua;</div><div class="line">                <span class="keyword">if</span>(sua.os.version==<span class="string">'x86_64'</span>)sua.os.version=<span class="string">'x64'</span>;</div><div class="line">                <span class="keyword">return</span> <span class="string">'&lt;span class="this_ua browser '</span>+sua.browser.name+<span class="string">'"&gt;'</span>+sua.browser.name+<span class="string">' | '</span>+sua.browser.version+<span class="string">'&lt;/span&gt;'</span>+<span class="string">'&lt;span class="this_ua platform '</span>+sua.os.name+<span class="string">'"&gt;'</span>+sua.os.name+<span class="string">' '</span>+sua.os.version+<span class="string">'&lt;/span&gt;'</span>;</div><div class="line">            &#125;</div><div class="line">        &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>PS: 这里我又喜闻乐见的踩到坑了。。网上大部分的介绍在上面的代码中使用的都是<code>e.agent</code>，但是根据最新版的多说embed.js中的定义应该使用<code>e.post.agent</code>，修改完后总算看到效果了<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_0.png" alt=""></p>
+<p>多说收工٩(ˊᗜˋ*)و</p>
+<h1 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h1><p><a href="http://service.ibruce.info/" target="_blank" rel="external">不蒜子</a>是极简的网页计数器，用起来真的是低碳绿色环保，两句代码就能集成，帮助统计网站的访问量。官网上也写明了使用方法，我这里提下要点。</p>
+<ul>
+<li><code>首先在博客的script文件中加入这段脚本</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>然后在网站的bottom中插入总访问量PV和总访客数UV</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_site_pv"</span>&gt;</div><div class="line">    本站总访问量&lt;span id=<span class="string">"busuanzi_value_site_pv"</span>&gt;&lt;/span&gt;次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_site_uv"</span>&gt;</div><div class="line">  本站访客数&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;&lt;/span&gt;人次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>最后在每篇文章中加入访问量PV</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_page_pv"</span>&gt;</div><div class="line">  本文总阅读量&lt;span id=<span class="string">"busuanzi_value_page_pv"</span>&gt;&lt;/span&gt;次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<p>PS：我一开始手滑把文章PV用成了全站PV，还给不蒜子作者发邮件询问为什么统计量不对呢。。捂脸 &gt;///&lt;<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_1.png" alt=""></p>
+<p>不蒜子收工٩(ˊᗜˋ*)و</p>
+<h1 id="捐赠"><a href="#捐赠" class="headerlink" title="捐赠"></a>捐赠</h1><p>好吧。。这个破站现在并没有什么值得各路dalao打赏的干货，不过梦想还是要有的，万一有路过的好心人投了一颗糖或者送了一杯速溶咖啡呢，直接上代码吧。</p>
+<ul>
+<li><code>添加样式</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.donate_bar</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">margin-left</span>: auto;</div><div class="line">    <span class="attribute">margin-right</span>: auto;</div><div class="line">    <span class="attribute">width</span>: auto;</div><div class="line">    <span class="attribute">height</span>: auto;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#fff</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">    <span class="attribute">letter-spacing</span>: .<span class="number">01em</span>;</div><div class="line">    <span class="attribute">cursor</span>: pointer;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#9eabb3</span><span class="meta">!important</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#9eabb3</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">8px</span> <span class="number">15px</span>;</div><div class="line">    <span class="attribute">-webkit-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-moz-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-o-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-ms-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">transition</span>: background <span class="number">0s</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">82px</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span><span class="selector-class">.hidden</span>&#123;</div><div class="line">    <span class="attribute">display</span>: none</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.post-donate</span>&#123;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#donate_guide</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">210px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">420px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#donate_guide</span> <span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>代码部分，放到文章评论区上方即可</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span> </span>=<span class="string">"post-donate"</span>&gt;</div><div class="line">    &lt;div id="donate_board" class="donate_bar center"&gt;</div><div class="line">        &lt;a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"&gt;给作者投食戳这里OwO&lt;/a&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div id="donate_guide" class="donate_bar center hidden" &gt;</div><div class="line">        &lt;!-- 支付宝打赏图案 --&gt;</div><div class="line">        &lt;img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏"&gt;</div><div class="line">        &lt;!-- 微信打赏图案 --&gt;</div><div class="line">        &lt;img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏"&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script type="text/javascript"&gt;</div><div class="line">        document.getElementById('btn_donate').onclick = function()&#123;</div><div class="line">            $('#donate_board').addClass('hidden');</div><div class="line">            $('#donate_guide').removeClass('hidden');</div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>PS：上面的打赏按钮样式是根据Themia按钮风格来的，可以根据自己的博客风格微调，记得把代码中的支付宝和微信图案换成自己的，不然钱打到我的账户我可不管╮(￣▽￣)╭<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_2.png" alt=""><br>捐赠收工٩(ˊᗜˋ*)و</p>
+<h1 id="性能与SEO优化"><a href="#性能与SEO优化" class="headerlink" title="性能与SEO优化"></a>性能与SEO优化</h1><p>性能关乎博客页面加载速度，SEO关乎搜索排名的前后，有余力的就把这块也一起折腾了吧，这方面内容比较多，而且已经有一些不错的文章介绍了这方面的内容，我就直接甩自己看过的文章链接了<br>性能: <a href="https://yq.aliyun.com/articles/8608" target="_blank" rel="external">Hexo折腾记——性能优化篇</a><br>SEO: <a href="http://www.jianshu.com/p/86557c34b671" target="_blank" rel="external">Hexo Seo优化让你的博客在google搜索排名第一</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个博客在Themia的基础上还加了底部图片Banner，blog age计时，侧边栏样式优化，都是一些html/css/js的修改，没什么好说的了，很羡慕那些前端工程师们可以把自己的博客打点的很漂亮，Android党鸭梨山大(/ω＼)，以后前端知识精进了再继续折腾，到此结束~</p>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/blog/">blog</a> <a class="tag tag--primary tag--small t-link" href="/tags/hexo/">hexo</a> <a class="tag tag--primary tag--small t-link" href="/tags/web/">web</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/25/tools-plugin/" data-tooltip="那些用了根本停不下来的插件">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">给作者投食戳这里OwO</a>
+        <br>
+    </div>
+    <div id="donate_guide" class="donate_bar center hidden" >
+        <!-- 支付宝打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+<div id="ds-thread" class="ds-thread" data-thread-key="2016/11/23/web-hexo/"
+     data-title="折腾博客" data-url="codeest.moe/2016/11/23/web-hexo/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <div id="footer-img"></div>
+    <span class="copyrights">
+        <p>
+            Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>.
+            Theme - <a href="https://github.com/kaedea/hexo-theme-themia">Themia</a>.<br>
+            <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors.</span>
+            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span>
+            <span id="times"></span><br>
+            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>.
+        </p>
+        Copyrights &copy; 2016 Est. All Rights Reserved.٩(ˊᗜˋ*)و
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/25/tools-plugin/" data-tooltip="那些用了根本停不下来的插件">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/11/23/web-hexo/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/my_avatar.png"/>
+        
+            <h4 id="about-card-name">Est</h4>
+        
+            <h5 id="about-card-bio"><p>Coder &amp; ACGer</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android Develper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                上海
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/scrip-wpdndyfkojbrwjejvfwxsb75phn4ilame6j4jnudyojiekwsnzbgyj9pwce8.min.js"></script>
+<!--SCRIPTS END-->
+<!--BUSUANZI-->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+<!--BUSUANZI END-->
+<!--PANGU AUTO SPACE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
+<!--PANGU AUTO SPACE END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'codeest'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+                ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
+                ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <script type="text/javascript">
+            if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+            else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+            function hookDUOSHUO_tp(){
+                var _D_post=DUOSHUO.templates.post
+                DUOSHUO.templates.post=function (e,t){
+                    var rs=_D_post(e,t);
+                    if(e.post.agent&&/^Mozilla/.test(e.post.agent))
+                        rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
+                    return rs;
+                }
+            }
+            function show_ua(string){
+                $.ua.set(string);
+                var sua=$.ua;
+                if(sua.os.version=='x86_64')sua.os.version='x64';
+                return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>'+'<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>';
+            }
+        </script>
+    
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
+    </script>
+
+    <script language=javascript>
+        function show_date_time()
+        {
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay = new Date("9/11/2016 0:00:00");today=new Date();timeold=(today.getTime() - BirthDay.getTime());sectimeold=timeold/1000;secondsold=Math.floor(sectimeold);msPerDay=24*60*60*1000;e_daysold=timeold/msPerDay;daysold=Math.floor(e_daysold); e_hrsold=(e_daysold-daysold)*24;hrsold=Math.floor(e_hrsold); e_minsold=(e_hrsold-hrsold)*60; minsold=Math.floor((e_hrsold-hrsold)*60); seconds=Math.floor((e_minsold-minsold)*60);
+            times.innerHTML="<span>Blog age:"+daysold+ " day " +hrsold+" h "+minsold+" m "+seconds+" s."+"</span>";
+        }
+        show_date_time();
+    </script>
+
+</html>
