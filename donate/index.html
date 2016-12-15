@@ -6,29 +6,65 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Est的小窝">
-    <title>使用node.js + koa2搭建RESTful API - Est的小窝</title>
+    <title>Est的小金库 - Est的小窝</title>
     <meta name="author" content="Est">
     
     
         <link rel="icon" href="codeest.moe/assets/images/kaede-avatar-k-50.png">
     
     
-    <meta name="description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
+    <meta name="description" content="这里是Est的小金库╮(￣▽￣)╭，感谢所有给我投食的人，不管是一颗糖还是一顿晚饭，对我而言都是生活中的小惊喜，足以让我高兴好一会。如果我写的开源APP、Lib，亦或是瞎扯淡的文章能够对你有帮助的话那也是再好不过了。
+搞♂基名单： 
+由于微信转账不会显示名称，所以只能写“微信的小伙伴”了。。你也可以通过评论或邮件告诉我你的名字(￣３￣)a
+
+
+
+日期
+昵称
+金额
+
+
+
+
+2016-12-13
+起波">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="使用node.js + koa2搭建RESTful API">
-<meta property="og:url" content="codeest.moe/2016/09/21/web-api-code/index.html">
+<meta property="og:title" content="Est的小金库">
+<meta property="og:url" content="codeest.moe/2016/01/01/donate/index.html">
 <meta property="og:site_name" content="Est的小窝">
-<meta property="og:description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
-<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_0.png">
-<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_1.png">
-<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_1.png">
-<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_2.png">
-<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_3.png">
-<meta property="og:updated_time" content="2016-09-24T15:09:06.000Z">
+<meta property="og:description" content="这里是Est的小金库╮(￣▽￣)╭，感谢所有给我投食的人，不管是一颗糖还是一顿晚饭，对我而言都是生活中的小惊喜，足以让我高兴好一会。如果我写的开源APP、Lib，亦或是瞎扯淡的文章能够对你有帮助的话那也是再好不过了。
+搞♂基名单： 
+由于微信转账不会显示名称，所以只能写“微信的小伙伴”了。。你也可以通过评论或邮件告诉我你的名字(￣３￣)a
+
+
+
+日期
+昵称
+金额
+
+
+
+
+2016-12-13
+起波">
+<meta property="og:updated_time" content="2016-12-15T15:40:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用node.js + koa2搭建RESTful API">
-<meta name="twitter:description" content="作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能">
-<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/web_api_code_0.png">
+<meta name="twitter:title" content="Est的小金库">
+<meta name="twitter:description" content="这里是Est的小金库╮(￣▽￣)╭，感谢所有给我投食的人，不管是一颗糖还是一顿晚饭，对我而言都是生活中的小惊喜，足以让我高兴好一会。如果我写的开源APP、Lib，亦或是瞎扯淡的文章能够对你有帮助的话那也是再好不过了。
+搞♂基名单： 
+由于微信转账不会显示名称，所以只能写“微信的小伙伴”了。。你也可以通过评论或邮件告诉我你的名字(￣３￣)a
+
+
+
+日期
+昵称
+金额
+
+
+
+
+2016-12-13
+起波">
     
     
         
@@ -37,12 +73,9 @@
         <meta property="og:image" content="codeest.moe/assets/images/my_avatar.png"/>
     
     
-        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/thumbnail2.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/thumbnail2.jpg" />
     
-    
-        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img.jpg" />
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img_donate.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img_donate.jpg" />
     
     
     <!--STYLES-->
@@ -203,20 +236,16 @@
         
             <li class="sidebar-button">
                 
-                    <a  class="sidebar-button-link "
-                         href="https://codeest.moe/lab"
-                    >
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/project" target="_blank">
                 
                     <i class="sidebar-button-icon fa fa-lg fa-flask"></i>
-                    <span class="sidebar-button-desc">Lab</span>
+                    <span class="sidebar-button-desc">Project</span>
                 </a>
             </li>
         
             <li class="sidebar-button">
                 
-                    <a  class="sidebar-button-link "
-                         href="https://codeest.moe/donate"
-                    >
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/donate" target="_blank">
                 
                     <i class="sidebar-button-icon fa fa-lg fa-dollar"></i>
                     <span class="sidebar-button-desc">Donate</span>
@@ -225,11 +254,9 @@
         
             <li class="sidebar-button">
                 
-                    <a  class="sidebar-button-link "
-                         href="https://codeest.moe/bangumi"
-                    >
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/bangumi" target="_blank">
                 
-                    <i class="sidebar-button-icon fa fa-lg fa-power-off"></i>
+                    <i class="sidebar-button-icon fa fa-lg fa-snowflake-o"></i>
                     <span class="sidebar-button-desc">Bangumi</span>
                 </a>
             </li>
@@ -242,27 +269,21 @@
         <div class="post-header-cover
                     text-left
                     "
-             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img.jpg');"
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img_donate.jpg');"
              data-behavior="3">
             
                 <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            使用node.js + koa2搭建RESTful API
+            Est的小金库
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Wed Sep 21 2016 20:25:50 GMT+0800">
+    <time itemprop="datePublished" content="Fri Jan 01 2016 10:10:10 GMT+0800">
 	
-		    Sep 21, 2016
+		    Jan 01, 2016
     	
     </time>
-    
-        <span>IN </span>
-        
-    <a class="category-link" href="/categories/Web/">Web</a>
-
-
     
 </div>
 
@@ -285,45 +306,57 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt --></p>
-<h1 id="1-选择语言与框架"><a href="#1-选择语言与框架" class="headerlink" title="1.选择语言与框架"></a>1.选择语言与框架</h1><p></p><p>考虑了3款比较热门的后端语言，PHP，JavaScript（node.js），Python，打算从中选择一款，分别比较了它们的特点，最后选定了用node.js来开发，原因有3点：<br><br>1.js目前比较泛用，本身既能写Web前端，又能通过node.js来写后端，还能通过ReactNative来写移动端，真的是居家旅行必备2333<br>2.node.js搭建的服务端在性能上很出色<br>3.我本人也对Web开发很感兴趣QwQ</p><br>然后就是框架的选择了，node.js的web框架主流的选择有express和koa，koa算是express的进化版，技术还是新的好~ koa!就决定是你了╮(￣▽￣)╭<p></p>
-<h1 id="2-编写node-js代码"><a href="#2-编写node-js代码" class="headerlink" title="2.编写node.js代码"></a>2.编写node.js代码</h1><p>这部分的内容还是比较多的，更推荐看专业的教程，推荐廖雪峰老师的JavaScript教程中的node.js部分，最后会手把手教你使用node.js构筑基于koa2的MVC架构的RESTful API项目，可以去下载demo扩展成满足自己项目需要的API<br></p>
-<p><big><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000" target="_blank" rel="external">教程地址</a></p></big><br>我写的简易<a href="https://github.com/codeestX/my-restful-api" target="_blank" rel="external">RESTful API demo</a>如下<br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_0.png" alt=""></p>
-<h1 id="3-分析API类型"><a href="#3-分析API类型" class="headerlink" title="3.分析API类型"></a>3.分析API类型</h1><p>常见的API类型有GET、POST、DELETE、PUT，这几种类型的写法在廖老师的教程中都有涉及，其中GET通常又分为3种类型：</p>
-<ul>
-<li>返回Json</li>
-<li>返回图片资源</li>
-<li>返回用于下载的文件</li>
-</ul>
-<p>教程中没有划分这几种GET类型，我在自己的demo中分别实践了一遍</p>
-<h3 id="3-1-返回Json"><a href="#3-1-返回Json" class="headerlink" title="3.1 返回Json"></a>3.1 返回Json</h3><p>这种类型最常用，直接返回可以转化为实体类的Json结构体<br>koa中type类型定义为<code>application/json</code> body直接传入一个对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /api/geeknews/version'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(&#123;</div><div class="line">        	<span class="attr">code</span>: version.getVersionCode(),</div><div class="line">        	<span class="attr">des</span>: version.getVersionDes()</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/json'</span>;</div><div class="line">                    ctx.response.body = &#123;</div><div class="line">                        <span class="attr">code</span>: <span class="number">200</span>,</div><div class="line">                        <span class="attr">message</span>: <span class="string">''</span>,</div><div class="line">                        <span class="attr">data</span>: data</div><div class="line">                    &#125;;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://odck16ake.bkt.clouddn.com/web_api_1.png" alt=""></p>
-<h3 id="3-2-返回图片资源"><a href="#3-2-返回图片资源" class="headerlink" title="3.2 返回图片资源"></a>3.2 返回图片资源</h3><p>这种类型在Android端多用于Glide、Picasso等框架加载图片<br>koa中type类型定义为<code>.jpg</code>（也可以是其他图片类型） body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /img/test.jpg'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(imgPath)</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'.jpg'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_1.png" alt=""></p>
-<h3 id="3-3-返回用于下载的文件"><a href="#3-3-返回用于下载的文件" class="headerlink" title="3.3 返回用于下载的文件"></a>3.3 返回用于下载的文件</h3><p>这种类型在Android端多用于更新apk包，下载配置文件等<br>koa中type类型定义为<code>application/octet-stream</code> body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /apk/geeknews.apk'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(filePath)</div><div class="line">        );</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/octet-stream'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
-<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_2.png" alt=""><br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_3.png" alt=""></p>
-<p>这篇文章主要的目的在于让大家少走弯路，具体代码还是需要去参考上面列出的教程和demo，掌握了之后自己写一些简单的RESTful API还是很轻松的(´・ω・`)</p>
+            <p>这里是Est的小金库╮(￣▽￣)╭，感谢所有给我投食的人，不管是一颗糖还是一顿晚饭，对我而言都是生活中的小惊喜，足以让我高兴好一会。如果我写的开源APP、Lib，亦或是瞎扯淡的文章能够对你有帮助的话那也是再好不过了。</p>
+<p><b>搞♂基名单：</b> </p>
+<p>由于微信转账不会显示名称，所以只能写“微信的小伙伴”了。。你也可以通过评论或邮件告诉我你的名字(￣３￣)a</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日期</th>
+<th style="text-align:center">昵称</th>
+<th style="text-align:center">金额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2016-12-13</td>
+<td style="text-align:center">起波</td>
+<td style="text-align:center">¥ 6.66</td>
+</tr>
+<tr>
+<td style="text-align:center">2016-12-08</td>
+<td style="text-align:center">迪生</td>
+<td style="text-align:center">¥ 29.99</td>
+</tr>
+<tr>
+<td style="text-align:center">2016-11-29</td>
+<td style="text-align:center">haibinpark</td>
+<td style="text-align:center">¥ 2.00</td>
+</tr>
+<tr>
+<td style="text-align:center">2016-11-22</td>
+<td style="text-align:center">微信的小伙伴</td>
+<td style="text-align:center">¥ 2.33</td>
+</tr>
+<tr>
+<td style="text-align:center">2016-10-18</td>
+<td style="text-align:center">凡</td>
+<td style="text-align:center">¥ 0.01</td>
+</tr>
+</tbody>
+</table>
+
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/api/">api</a> <a class="tag tag--primary tag--small t-link" href="/tags/node-js/">node.js</a> <a class="tag tag--primary tag--small t-link" href="/tags/web/">web</a>
-
-            </div>
         
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/24/web-api/"  data-tooltip="将node.js编写的API部署到服务器">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/lab/"  data-tooltip="Est的实验室">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -331,7 +364,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/" data-tooltip="Hello, Blog">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -346,17 +379,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -398,8 +431,8 @@
         }
     </script>
 </div>
-<div id="ds-thread" class="ds-thread" data-thread-key="2016/09/21/web-api-code/"
-     data-title="使用node.js + koa2搭建RESTful API" data-url="codeest.moe/2016/09/21/web-api-code/">
+<div id="ds-thread" class="ds-thread" data-thread-key="2016/01/01/donate/"
+     data-title="Est的小金库" data-url="codeest.moe/2016/01/01/donate/">
 </div>
 
             
@@ -432,7 +465,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/24/web-api/"  data-tooltip="将node.js编写的API部署到服务器">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/lab/"  data-tooltip="Est的实验室">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -440,7 +473,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/" data-tooltip="Hello, Blog">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -455,17 +488,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/09/21/web-api-code/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -491,17 +524,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/09/21/web-api-code/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/09/21/web-api-code/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/09/21/web-api-code/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=codeest.moe/2016/01/01/donate/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
