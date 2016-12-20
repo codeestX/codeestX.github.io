@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Est的小窝</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="blog.codeest.moe/"/>
+  <updated>2016-12-15T16:48:31.000Z</updated>
+  <id>blog.codeest.moe/</id>
+  
+  <author>
+    <name>Est</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《你的名字。》</title>
+    <link href="blog.codeest.moe/2016/12/04/acg-yourname/"/>
+    <id>blog.codeest.moe/2016/12/04/acg-yourname/</id>
+    <published>2016-12-04T15:32:23.000Z</published>
+    <updated>2016-12-15T16:48:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<embed width="850" height="706" align="center" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://share.acg.tv/flash.swf" flashvars="aid=7380766&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+
+<div class="figure fig-100" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58991926.jpg" alt=""></div>
+<div class="figure fig-50" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58731987.jpg" alt=""></div>
+<div class="figure fig-50" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58851378.jpg" alt=""></div>
+<div class="figure fig-100" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=59240220.jpg" alt=""></div>
+<div class="figure fig-50" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58750676.jpg" alt=""></div>
+<div class="figure fig-50" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58916524.jpg" alt=""></div>
+<div class="figure fig-100" style="width:;"><img class="fig-img" src="http://odck16ake.bkt.clouddn.com/yourname/id=58898400.png" alt=""></div>
+<p>PIXIV ID: 59214087、58991926、58731987、58851378、59240220、58750676、58916524、58898400</p>
+<p>感谢诚哥带来的这部的触动人心的作品，票房实至名归，电影结束后全场不约而同的响起了掌声，这种贴近生活却又高于生活的故事真的可以带来难以磨灭的印象。</p>
+<p>每一帧都可以截做壁纸的风景，插入时机合适的BGM，奇幻却又逻辑严谨的整体情节，表现力充分的分镜与CV，两个小时不知不觉间沉浸其中。</p>
+<p>前半段伴随着许多笑点，后半段逐渐揭开伏笔，带来的与其说是泪点，不如说是一次又一次很直接的心灵的震颤。</p>
+<ul>
+<li><p>“喜欢你” “笨蛋，这几个字，我怎么知道你的名字啊”</p>
+</li>
+<li><p>只要记住你的名字，不管你在世界的哪个地方，我一定会再去见你。</p>
+</li>
+<li><p>重要的人，不能忘记的人，不想忘记的人。 你，是谁？</p>
+</li>
+</ul>
+<p><b>所有的相遇，都是久别的重逢</b></p>
+<p>————-华丽的分割线————–</p>
+<p>2016-12-15 达成成就：二刷 (๑＞ڡ＜)☆</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;所有的相遇，都是久别的重逢&lt;br&gt;
+    
+    </summary>
+    
+      <category term="ACG" scheme="blog.codeest.moe/categories/ACG/"/>
+    
+    
+      <category term="acg" scheme="blog.codeest.moe/tags/acg/"/>
+    
+      <category term="movie" scheme="blog.codeest.moe/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>折腾博客</title>
+    <link href="blog.codeest.moe/2016/11/23/web-hexo/"/>
+    <id>blog.codeest.moe/2016/11/23/web-hexo/</id>
+    <published>2016-11-22T17:02:27.000Z</published>
+    <updated>2016-11-24T17:24:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<h1 id="选择博客框架"><a href="#选择博客框架" class="headerlink" title="选择博客框架"></a>选择博客框架</h1><p>现在主流的博客框架有hexo, jeklly, WordPress三款，其中WordPress应该算是功能最强大的，自带MySQL数据库，数量众多的插件和主题，支持自定义各种侧边小控件，还有一个图形化界面管理后台，但是不像前两者可以方便的搭在GithubPages上，需要自己买台服务器提供空间，而且对markdown的支持貌似也不如前两者好。至于hexo和jeklly在特点上几乎没什么区别，只是一个基于nodejs一个基于ruby，都很轻量级，性能好速度快，近年来很火。</p>
+<p>在分别尝试了用<a href="https://github.com/DIYgod/Amativeness" target="_blank" rel="external">Amativeness</a>主题配合WordPress建站和用<a href="https://github.com/kaedea/hexo-theme-themia" target="_blank" rel="external">Themia</a>主题配合Hexo建站后最后还是选择了后者，搭建完成发现还少了不少东西，需要继续折腾。</p>
+<h1 id="多说"><a href="#多说" class="headerlink" title="多说"></a>多说</h1><p><a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>是国内知名的网站第三方评论系统，Themia基于的tranquilpeak主题中已经集成了多说，直接把申请到的key填入就可以生效了。但是没有做任何处理的默认的主题样式很一般…而且和Themia的风格也不怎么搭，不折腾一下能忍咩？好在多说支持自定义css属性，那就好办了，这里是<a href="http://dev.duoshuo.com/docs/4ff1cfd0397309552c000017" target="_blank" rel="external">自定义样式文档</a></p>
+<p>直接分享下我的评论栏的css代码吧</p>
+<ul>
+<li><code>圆形头像与鼠标悬浮旋转</code>  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#ds-reset .ds-avatar img &#123;</div><div class="line">    width:54px;height:54px;</div><div class="line">    margin-right: 12px;</div><div class="line">    border-radius: 27px;</div><div class="line">    -webkit-border-radius: 27px;    </div><div class="line">    -moz-border-radius:27px;</div><div class="line">    box-shadow: inset 0 -1px 0 #3333sf;</div><div class="line">    -webkit-box-shadow: inset 0 -1px 0 #3333sf;</div><div class="line">    -webkit-transition: 0.4s;   </div><div class="line">    -webkit-transition: -webkit-transform 0.4s ease-out;</div><div class="line">    transition: transform 0.4s ease-out;</div><div class="line">    -moz-transition: -moz-transform 0.4s ease-out;&#125;</div><div class="line"></div><div class="line">#ds-reset .ds-avatar img:hover&#123;    </div><div class="line">box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);</div><div class="line">    -webkit-box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);</div><div class="line">    transform: rotateZ(360deg);</div><div class="line">    -webkit-transform: rotateZ(360deg);</div><div class="line">    -moz-transform: rotateZ(360deg);&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>右侧的背景图片 url地址换成你的外链图片</code>  </li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-tag">textarea</span> &#123;<span class="attribute">background</span>:<span class="built_in">url</span>(http://odck16ake.bkt.clouddn.com/duoshuo.png) no-repeat right bottom <span class="meta">!important</span>; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>边框和按钮变圆角，设置背景色</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> &#123;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">3px</span> <span class="number">3px</span> <span class="number">0px</span> <span class="number">0px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#F4F6F7</span>;&#125;</div><div class="line">	</div><div class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-options</span> &#123;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">3px</span>;&#125;</div></pre></td></tr></table></figure>
+<p>把上面的代码直接粘贴到多说后台自定义css中保存即可。到这里还没有结束，接下来还要给评论加上操作系统和浏览器信息，继续：</p>
+<ul>
+<li><code>添加样式</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span><span class="selector-class">.this_ua</span> &#123;<span class="attribute">background-color</span>: <span class="number">#ccc</span><span class="meta">!important</span>;<span class="attribute">border-radius</span>: <span class="number">4px</span>;<span class="attribute">padding</span>: <span class="number">0</span> <span class="number">5px</span><span class="meta">!important</span>;<span class="attribute">margin</span>: <span class="number">0</span> <span class="number">1px</span><span class="meta">!important</span>;<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#BBB</span><span class="meta">!important</span>;<span class="attribute">color</span>: <span class="number">#fff</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Windows</span>&#123;<span class="attribute">background-color</span>: <span class="number">#39b3d7</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#46b8da</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Linux</span> &#123;<span class="attribute">background-color</span>: <span class="number">#3A3A3A</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#1F1F1F</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Android</span> &#123;<span class="attribute">background-color</span>: <span class="number">#00C47D</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#01B171</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Chrome</span>&#123;<span class="attribute">background-color</span>: <span class="number">#5cb85c</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#4cae4c</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Firefox</span>&#123;<span class="attribute">background-color</span>: <span class="number">#f0ad4e</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#eea236</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.IE</span>&#123;<span class="attribute">background-color</span>: <span class="number">#428bca</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#357ebd</span><span class="meta">!important</span>;&#125;</div><div class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Opera</span>&#123;<span class="attribute">background-color</span>: <span class="number">#d9534f</span><span class="meta">!important</span>;<span class="attribute">border-color</span>: <span class="number">#d43f3a</span><span class="meta">!important</span>;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>找到你的博客中的多说js代码，在后面紧接着添加引用ua-parser.js的部分</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            <span class="keyword">var</span> duoshuoQuery = &#123;<span class="attr">short_name</span>:<span class="string">'codeest'</span>&#125;;</div><div class="line">            (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">                ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">                ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</div><div class="line">                ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">                (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</div><div class="line">                || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">                ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">                ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">                ds.src = <span class="string">'http://faisalman.github.io/ua-parser-js/src/ua-parser.js'</span>;</div><div class="line">                ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">      (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">            &#125;)();</div><div class="line">        &lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>在上面这段代码下面再紧接着添加下面这段</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> DUOSHUO !== <span class="string">'undefined'</span>)hookDUOSHUO_tp();</div><div class="line">            <span class="keyword">else</span> $(<span class="string">'[src="http://static.duoshuo.com/embed.js"]'</span>)[<span class="number">0</span>].onload=hookDUOSHUO_tp;</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">hookDUOSHUO_tp</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">var</span> _D_post=DUOSHUO.templates.post</div><div class="line">                DUOSHUO.templates.post=<span class="function"><span class="keyword">function</span> (<span class="params">e,t</span>)</span>&#123;</div><div class="line">                    <span class="keyword">var</span> rs=_D_post(e,t);</div><div class="line">                    <span class="keyword">if</span>(e.post.agent&amp;&amp;<span class="regexp">/^Mozilla/</span>.test(e.post.agent))</div><div class="line">                        rs=rs.replace(<span class="regexp">/&lt;\/div&gt;&lt;p&gt;/</span>,show_ua(e.post.agent)+<span class="string">'&lt;/div&gt;&lt;p&gt;'</span>);</div><div class="line">                    <span class="keyword">return</span> rs;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">show_ua</span>(<span class="params">string</span>)</span>&#123;</div><div class="line">                $.ua.set(string);</div><div class="line">                <span class="keyword">var</span> sua=$.ua;</div><div class="line">                <span class="keyword">if</span>(sua.os.version==<span class="string">'x86_64'</span>)sua.os.version=<span class="string">'x64'</span>;</div><div class="line">                <span class="keyword">return</span> <span class="string">'&lt;span class="this_ua browser '</span>+sua.browser.name+<span class="string">'"&gt;'</span>+sua.browser.name+<span class="string">' | '</span>+sua.browser.version+<span class="string">'&lt;/span&gt;'</span>+<span class="string">'&lt;span class="this_ua platform '</span>+sua.os.name+<span class="string">'"&gt;'</span>+sua.os.name+<span class="string">' '</span>+sua.os.version+<span class="string">'&lt;/span&gt;'</span>;</div><div class="line">            &#125;</div><div class="line">        &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>PS: 这里我又喜闻乐见的踩到坑了。。网上大部分的介绍在上面的代码中使用的都是<code>e.agent</code>，但是根据最新版的多说embed.js中的定义应该使用<code>e.post.agent</code>，修改完后总算看到效果了<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_0.png" alt=""></p>
+<p>多说收工٩(ˊᗜˋ*)و</p>
+<h1 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h1><p><a href="http://service.ibruce.info/" target="_blank" rel="external">不蒜子</a>是极简的网页计数器，用起来真的是低碳绿色环保，两句代码就能集成，帮助统计网站的访问量。官网上也写明了使用方法，我这里提下要点。</p>
+<ul>
+<li><code>首先在博客的script文件中加入这段脚本</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>然后在网站的bottom中插入总访问量PV和总访客数UV</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_site_pv"</span>&gt;</div><div class="line">    本站总访问量&lt;span id=<span class="string">"busuanzi_value_site_pv"</span>&gt;&lt;/span&gt;次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_site_uv"</span>&gt;</div><div class="line">  本站访客数&lt;span id=<span class="string">"busuanzi_value_site_uv"</span>&gt;&lt;/span&gt;人次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>最后在每篇文章中加入单页访问量PV</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=<span class="string">"busuanzi_container_page_pv"</span>&gt;</div><div class="line">  本文总阅读量&lt;span id=<span class="string">"busuanzi_value_page_pv"</span>&gt;&lt;/span&gt;次</div><div class="line">&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
+<p>PS：我一开始手滑把单页PV用成了全站PV，还给不蒜子作者发邮件询问为什么统计量不对呢。。捂脸 &gt;///&lt;<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_1.png" alt=""></p>
+<p>不蒜子收工٩(ˊᗜˋ*)و</p>
+<h1 id="捐赠"><a href="#捐赠" class="headerlink" title="捐赠"></a>捐赠</h1><p>好吧。。这个破站现在并没有什么值得各路dalao打赏的干货，不过梦想还是要有的，万一有路过的好心人投了一颗糖或者送了一杯速溶咖啡呢，直接上代码吧。</p>
+<ul>
+<li><code>添加样式</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.donate_bar</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span> &#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">margin-left</span>: auto;</div><div class="line">    <span class="attribute">margin-right</span>: auto;</div><div class="line">    <span class="attribute">width</span>: auto;</div><div class="line">    <span class="attribute">height</span>: auto;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#fff</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">    <span class="attribute">letter-spacing</span>: .<span class="number">01em</span>;</div><div class="line">    <span class="attribute">cursor</span>: pointer;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#9eabb3</span><span class="meta">!important</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#9eabb3</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">8px</span> <span class="number">15px</span>;</div><div class="line">    <span class="attribute">-webkit-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-moz-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-o-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">-ms-transition</span>: background <span class="number">0s</span>;</div><div class="line">    <span class="attribute">transition</span>: background <span class="number">0s</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span> <span class="selector-tag">a</span><span class="selector-class">.btn_donate</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">82px</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.donate_bar</span><span class="selector-class">.hidden</span>&#123;</div><div class="line">    <span class="attribute">display</span>: none</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.post-donate</span>&#123;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#donate_guide</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">210px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">420px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#donate_guide</span> <span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>代码部分，放到文章评论区上方即可</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span> </span>=<span class="string">"post-donate"</span>&gt;</div><div class="line">    &lt;div id="donate_board" class="donate_bar center"&gt;</div><div class="line">        &lt;a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"&gt;给作者投食戳这里OwO&lt;/a&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div id="donate_guide" class="donate_bar center hidden" &gt;</div><div class="line">        &lt;!-- 支付宝打赏图案 --&gt;</div><div class="line">        &lt;img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏"&gt;</div><div class="line">        &lt;!-- 微信打赏图案 --&gt;</div><div class="line">        &lt;img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏"&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script type="text/javascript"&gt;</div><div class="line">        document.getElementById('btn_donate').onclick = function()&#123;</div><div class="line">            $('#donate_board').addClass('hidden');</div><div class="line">            $('#donate_guide').removeClass('hidden');</div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>PS：上面的打赏按钮样式是根据Themia按钮风格来的，可以根据自己的博客风格微调，记得把代码中的支付宝和微信图案换成自己的，不然钱打到我的账户我可不管╮(￣▽￣)╭<br><img src="http://odck16ake.bkt.clouddn.com/web_hexo_2.png" alt=""><br>捐赠收工٩(ˊᗜˋ*)و</p>
+<h1 id="性能与SEO优化"><a href="#性能与SEO优化" class="headerlink" title="性能与SEO优化"></a>性能与SEO优化</h1><p>性能关乎博客页面加载速度，SEO关乎搜索排名的前后，有余力的就把这块也一起折腾了吧，这方面内容比较多，而且已经有一些不错的文章介绍了这方面的内容，我就直接甩自己看过的文章链接了<br>性能: <a href="https://yq.aliyun.com/articles/8608" target="_blank" rel="external">Hexo折腾记——性能优化篇</a><br>SEO: <a href="http://www.jianshu.com/p/86557c34b671" target="_blank" rel="external">Hexo Seo优化让你的博客在google搜索排名第一</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个博客在Themia的基础上还加了底部图片Banner，blog age计时，侧边栏样式优化，都是一些html/css/js的修改，没什么好说的了，很羡慕那些前端工程师们可以把自己的博客打点的很漂亮，Android党鸭梨山大(/ω＼)，以后前端知识精进了再继续折腾，到此结束~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间把博客大致折腾成了自己喜欢的样子，在这记录下吧&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="blog.codeest.moe/categories/Web/"/>
+    
+    
+      <category term="web" scheme="blog.codeest.moe/tags/web/"/>
+    
+      <category term="hexo" scheme="blog.codeest.moe/tags/hexo/"/>
+    
+      <category term="blog" scheme="blog.codeest.moe/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些用了根本停不下来的插件</title>
+    <link href="blog.codeest.moe/2016/09/25/tools-plugin/"/>
+    <id>blog.codeest.moe/2016/09/25/tools-plugin/</id>
+    <published>2016-09-25T09:45:57.000Z</published>
+    <updated>2016-11-05T18:22:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<h1 id="Chrome篇"><a href="#Chrome篇" class="headerlink" title="Chrome篇"></a>Chrome篇</h1><p>先放图，20款我正在用的Chrome插件，访问插件商店前记得科学上网！<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_00.png" alt=""></p>
+<h3 id="1-Vimium"><a href="#1-Vimium" class="headerlink" title="1. Vimium"></a>1. <a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=zh-CN" target="_blank" rel="external">Vimium</a></h3><p>支持全键盘操作Chrome，浓浓的极客风，习惯了键盘快捷键后可以更高效的操作Chrome</p>
+<h3 id="2-Momentum"><a href="#2-Momentum" class="headerlink" title="2. Momentum"></a>2. <a href="https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=zh-CN" target="_blank" rel="external">Momentum</a></h3><p>New Tab页面，每天一张精美的风景图，一句鸡汤，右下角还支持编辑记录TODO事件，非常简洁精致，让你的New Tab颜值爆炸<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_4.png" alt=""></p>
+<h3 id="3-JSONView"><a href="#3-JSONView" class="headerlink" title="3. JSONView"></a>3. <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=zh-CN" target="_blank" rel="external">JSONView</a></h3><p>自动格式化页面上的Json结构体，让接口返回的结果一目了然，非常适合调试API的时候使用</p>
+<h3 id="4-Adblock-Plus"><a href="#4-Adblock-Plus" class="headerlink" title="4. Adblock Plus"></a>4. <a href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?hl=zh-CN" target="_blank" rel="external">Adblock Plus</a></h3><p>这个可以算人人必备级别的插件了，高效屏蔽广告，baidu推广也可以屏蔽，真是打开了新世界的大门</p>
+<h3 id="5-qiniu-upload-files"><a href="#5-qiniu-upload-files" class="headerlink" title="5. qiniu upload files"></a>5. <a href="https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc?hl=zh-CN" target="_blank" rel="external">qiniu upload files</a></h3><p>七牛图床，在七牛官网上申请好账户，在这个插件中配置申请到的key等信息，就可以直接拖图片进去立刻生成图片外链，方便在写作的时候插入图片,账户初始应该有50G的免费空间</p>
+<h3 id="6-OneTab"><a href="#6-OneTab" class="headerlink" title="6. OneTab"></a>6. <a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=zh-CN" target="_blank" rel="external">OneTab</a></h3><p>你一定遇到过这样的情景，Chrome中开了很多Tab页，导致占用的内存很高，但是每个页面都很有用，又舍不去关，那么就可以用OneTab来管理，把当前所有Tab页都回收到一个Tab里，需要的时候再还原</p>
+<h3 id="7-Isometric-Contributions"><a href="#7-Isometric-Contributions" class="headerlink" title="7. Isometric Contributions"></a>7. <a href="https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien?hl=zh-CN" target="_blank" rel="external">Isometric Contributions</a></h3><p>可以将你在github上面的提交记录变得3D立体化的一个插件，用处不算大，可以玩玩</p>
+<h3 id="8-Avatars-for-Github"><a href="#8-Avatars-for-Github" class="headerlink" title="8. Avatars for Github"></a>8. <a href="https://chrome.google.com/webstore/detail/avatars-for-github/pgjmdbklnfklcjfbonjfkdhaonlfogbb?hl=zh-CN" target="_blank" rel="external">Avatars for Github</a></h3><p>在github的首页 News页面上默认只显示昵称，这个插件可以让头像也显示出来，更容易分清是谁在”程序员最大的同性交友网站”上和你有了交互<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_5.png" alt=""></p>
+<h3 id="9-Octotree"><a href="#9-Octotree" class="headerlink" title="9. Octotree"></a>9. <a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=zh-CN" target="_blank" rel="external">Octotree</a></h3><p>算是最实用的一个github插件了，在一个项目页面的左侧可以打开该项目的树状结构图，可以方便的直达某一个文件，再也不用一层一层点进去了<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_6.png" alt=""></p>
+<h3 id="10-ADB-Plugin"><a href="#10-ADB-Plugin" class="headerlink" title="10. ADB Plugin"></a>10. <a href="https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage?hl=zh-CN" target="_blank" rel="external">ADB Plugin</a></h3><p>支持在浏览器上连接手机，进行adb操作，方便Android开发调试</p>
+<h3 id="11-Search-by-Image"><a href="#11-Search-by-Image" class="headerlink" title="11. Search by Image"></a>11. <a href="https://chrome.google.com/webstore/detail/search-by-image-by-google/dajedkncpodkggklbegccjpmnglmnflm?hl=zh-CN" target="_blank" rel="external">Search by Image</a></h3><p>Google官方插件，对图片右键选择“Search Google with Image”，直接使用Google的以图搜图功能，需要科学上网</p>
+<h3 id="12-The-QR-Code-Extension"><a href="#12-The-QR-Code-Extension" class="headerlink" title="12. The QR Code Extension"></a>12. <a href="https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb?hl=zh-CN" target="_blank" rel="external">The QR Code Extension</a></h3><p>直接生成当前页面的二维码</p>
+<h3 id="13-Octo-Mate"><a href="#13-Octo-Mate" class="headerlink" title="13. Octo Mate"></a>13. <a href="https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf" target="_blank" rel="external">Octo Mate</a></h3><p>一款多功能的github插件，能够在项目主页显示项目的大小，在屏幕右侧列出README大纲，点击单个文件的图标还能下载单个文件，都是实用功能</p>
+<h3 id="14-GitHub-Awesome-Autocomplete"><a href="#14-GitHub-Awesome-Autocomplete" class="headerlink" title="14. GitHub Awesome Autocomplete"></a>14. <a href="https://chrome.google.com/webstore/detail/github-awesome-autocomple/djkfdjpoelphhdclfjhnffmnlnoknfnd?hl=zh-CN" target="_blank" rel="external">GitHub Awesome Autocomplete</a></h3><p>由Algolia搜索提供的github搜索栏扩展插件，在搜索栏里输入内容的同时就会显示部分搜索结果，比原本的搜索模式方便的多<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_10.png" alt=""></p>
+<h3 id="15-Custom-Google™-Background"><a href="#15-Custom-Google™-Background" class="headerlink" title="15. Custom Google™ Background"></a>15. <a href="https://chrome.google.com/webstore/detail/custom-google-background/jepibmfmhopgkplegmkjgifmhabbjadg?hl=zh-CN" target="_blank" rel="external">Custom Google™ Background</a></h3><p>支持自定义Google搜索主页的背景和小控件的显示，可以换上自己喜欢的壁纸，把用不到的小控件隐去<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_8.png" alt=""></p>
+<h3 id="16-划词翻译"><a href="#16-划词翻译" class="headerlink" title="16. 划词翻译"></a>16. <a href="https://chrome.google.com/webstore/search/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91?hl=zh-CN" target="_blank" rel="external">划词翻译</a></h3><p>可以直接翻译鼠标滑动选中的内容，我设置成了按住ctrl/command时翻译，MacBook支持三指触控翻译可以不用这个插件，Windows下还算好用</p>
+<h3 id="17-Tampermonkey"><a href="#17-Tampermonkey" class="headerlink" title="17. Tampermonkey"></a>17. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN" target="_blank" rel="external">Tampermonkey</a></h3><p>这款扩展插件就比较神奇了，浏览器脚本管理工具，可以开关、添删、编辑脚本。脚本和扩展插件不同，功能丰富强大的脚本也是比比皆是，比如屏蔽百度网盘下载限制，屏蔽主流视频网站片头广告，优化一些页面显示效果，还有一些老司机开车脚本…咳咳，各种脚本可以去<a href="https://greasyfork.org/zh-CN" target="_blank" rel="external">greasyfork.org</a>下载，配合这个插件使用</p>
+<h3 id="18-LastPass"><a href="#18-LastPass" class="headerlink" title="18. LastPass"></a>18. <a href="https://chrome.google.com/webstore/search/LastPass?hl=zh-CN" target="_blank" rel="external">LastPass</a></h3><p>现在各种网站都要求注册，LastPass就是管理记录各个站点密码的，可以一键添加，换浏览器了也可以同步记录，好记性不如烂笔头</p>
+<h3 id="19-Checker-Plus-for-Gmail"><a href="#19-Checker-Plus-for-Gmail" class="headerlink" title="19. Checker Plus for Gmail"></a>19. <a href="https://chrome.google.com/webstore/search/checker%20plus%20for%20gmail?hl=zh-CN" target="_blank" rel="external">Checker Plus for Gmail</a></h3><p>Gmail作为主力邮箱的赶紧装上吧，邮件来了第一时间弹窗提醒，点开插件图标可以快速查看邮件，还支持对邮件做各种操作<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_9.png" alt=""></p>
+<h3 id="20-Postman"><a href="#20-Postman" class="headerlink" title="20. Postman"></a>20. <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=zh-CN" target="_blank" rel="external">Postman</a></h3><p>我们平时可以在浏览器上直接测试<code>GET</code>型接口，但是对于<code>POST</code>,<code>DELETE</code>这些需要附带表单或是附带头部信息的接口就不方便调试了，Postman就满足任意类型的接口调试，可以添加各种信息来模拟接口访问，麻麻再也不用担心调接口了&gt; &lt;<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_7.png" alt=""></p>
+<h1 id="Android-Studio篇"><a href="#Android-Studio篇" class="headerlink" title="Android Studio篇"></a>Android Studio篇</h1><p>Android Studio实用插件挺多的，我只用了最需要的3款</p>
+<h3 id="1-GsonFormat"><a href="#1-GsonFormat" class="headerlink" title="1. GsonFormat"></a>1. GsonFormat</h3><p>可以将一串Json直接转化成对应的实体类，在类中右键Generate…-&gt;GsonFormat,将Json粘贴到窗口中，点击确定就会生成实体类的代码，懒人必备<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_1.png" alt=""></p>
+<h3 id="2-ButterKnife-Zelezny"><a href="#2-ButterKnife-Zelezny" class="headerlink" title="2. ButterKnife Zelezny"></a>2. ButterKnife Zelezny</h3><p>可以根据xml中定义好的控件生成butter knife的控件注入代码，在<code>R.layout.xxx</code>上右键Generate…-&gt;Generate Butterknife Injections,点击确定生成代码，懒人必备<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_2.png" alt=""></p>
+<h3 id="3-Sexy-Editor"><a href="#3-Sexy-Editor" class="headerlink" title="3. Sexy Editor"></a>3. Sexy Editor</h3><p>可以给代码编辑区设置背景，这个要看个人爱好了，Preferences -&gt; Other Settings -&gt; SexyEditor 在File list中放入图片路径即可<br><img src="http://odck16ake.bkt.clouddn.com/tools_plugin_3.png" alt=""><br>背景是E.M.T!</p>
+<h1 id="Sublime-Text篇"><a href="#Sublime-Text篇" class="headerlink" title="Sublime Text篇"></a>Sublime Text篇</h1><h3 id="1-Material"><a href="#1-Material" class="headerlink" title="1. Material"></a>1. Material</h3><p>准确来说这个是主题，目前我正在用的这款，作为Android Developer看到Material就被吸引过去了Σ( ° △ °|||)︴<br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_0.png" alt=""></p>
+<h3 id="2-AdvancedNewFile"><a href="#2-AdvancedNewFile" class="headerlink" title="2. AdvancedNewFile"></a>2. AdvancedNewFile</h3><p><code>command +Shift+N</code>快速创建新文件</p>
+<h3 id="3-Emmet"><a href="#3-Emmet" class="headerlink" title="3. Emmet"></a>3. Emmet</h3><p>开发前端必备</p>
+<h3 id="4-BracketHighlighter"><a href="#4-BracketHighlighter" class="headerlink" title="4. BracketHighlighter"></a>4. BracketHighlighter</h3><p>让括号、引号等配对符号高亮</p>
+<h3 id="5-Babel"><a href="#5-Babel" class="headerlink" title="5. Babel"></a>5. Babel</h3><p>javascript(ES6)代码高亮</p>
+<h3 id="6-SublimeLinter"><a href="#6-SublimeLinter" class="headerlink" title="6. SublimeLinter"></a>6. SublimeLinter</h3><p>javascript静态语法检测，出现错误会标红</p>
+<h3 id="7-JavaScript-Completions和Java​Script-amp-Node​JS-Snippets"><a href="#7-JavaScript-Completions和Java​Script-amp-Node​JS-Snippets" class="headerlink" title="7. JavaScript Completions和Java​Script &amp; Node​JS Snippets"></a>7. JavaScript Completions和Java​Script &amp; Node​JS Snippets</h3><p>javascript代码补全</p>
+<h3 id="8-All-Autocomplete"><a href="#8-All-Autocomplete" class="headerlink" title="8. All Autocomplete"></a>8. All Autocomplete</h3><p>记录打开过的文件的关键字用于补全</p>
+<h3 id="9-SublimeCodeIntel"><a href="#9-SublimeCodeIntel" class="headerlink" title="9. SublimeCodeIntel"></a>9. SublimeCodeIntel</h3><p>项目内代码补全</p>
+<h3 id="10-Terminal"><a href="#10-Terminal" class="headerlink" title="10. Terminal"></a>10. Terminal</h3><p><code>command+shift+T</code>在当前路径下打开终端</p>
+<h3 id="11-JsFormat"><a href="#11-JsFormat" class="headerlink" title="11. JsFormat"></a>11. JsFormat</h3><p>javascript和json自动格式化排版</p>
+<h3 id="12-react-native-snippets"><a href="#12-react-native-snippets" class="headerlink" title="12. react-native-snippets"></a>12. react-native-snippets</h3><p>添加react native代码片段</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;合适的插件对提升工作效率尤为重要，&lt;del&gt;偶尔还可以装个X，&lt;/del&gt;大致整理了自己平时最常用的插件，主要是Chrome，Android Studio，Sublime Text的插件，长期更新~~&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="blog.codeest.moe/categories/Tools/"/>
+    
+    
+      <category term="tool" scheme="blog.codeest.moe/tags/tool/"/>
+    
+      <category term="plugin" scheme="blog.codeest.moe/tags/plugin/"/>
+    
+      <category term="chrome" scheme="blog.codeest.moe/tags/chrome/"/>
+    
+      <category term="android studio" scheme="blog.codeest.moe/tags/android-studio/"/>
+    
+      <category term="sublime text" scheme="blog.codeest.moe/tags/sublime-text/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将node.js编写的API部署到服务器</title>
+    <link href="blog.codeest.moe/2016/09/24/web-api/"/>
+    <id>blog.codeest.moe/2016/09/24/web-api/</id>
+    <published>2016-09-24T15:35:55.000Z</published>
+    <updated>2016-09-24T15:09:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<h1 id="1-先确保在本地跑通项目"><a href="#1-先确保在本地跑通项目" class="headerlink" title="1.先确保在本地跑通项目"></a>1.先确保在本地跑通项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line"></div><div class="line">node start</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_1.png" alt=""></p>
+<h1 id="2-服务器配置node-js环境"><a href="#2-服务器配置node-js环境" class="headerlink" title="2.服务器配置node.js环境"></a>2.服务器配置node.js环境</h1><p>1.登陆服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -p [Port] root@[IP]</div></pre></td></tr></table></figure></p>
+<p>2.更新yum<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y update</div></pre></td></tr></table></figure></p>
+<p>3.安装一组编译源码的工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y groupinstall &quot;Development Tools&quot;</div></pre></td></tr></table></figure></p>
+<p>4.进入用于存放源码的文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/src</div></pre></td></tr></table></figure></p>
+<p>5.下载node.js源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://nodejs.org/dist/latest-v6.x/node-v6.6.0.tar.gz</div></pre></td></tr></table></figure></p>
+<p>6.解压文件并进入目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar zxf node-v6.6.0.tar.gz</div><div class="line">cd node-v6.6.0</div></pre></td></tr></table></figure></p>
+<p>7.执行脚本进行编译预处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure</div></pre></td></tr></table></figure></p>
+<p>8.编译源码并安装node.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
+<p>PS:我在这里踩到一个坑，服务器上gcc编译器的版本太低，无法编译最新版的node.js源码，在升级了gcc版本后重新执行这个步骤重编了一遍</p>
+<p>9.安装forever来保证项目进程持续存活<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -g install forever</div></pre></td></tr></table></figure></p>
+<p>10.建立超级链接，不然调用指令时会出现”command not found”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /usr/local/bin/node /usr/bin/node</div><div class="line">sudo ln -s /usr/local/lib/node /usr/lib/node </div><div class="line">sudo ln -s /usr/local/bin/npm /usr/bin/npm </div><div class="line">sudo ln -s /usr/local/bin/node-waf /usr/bin/node-waf </div><div class="line">sudo ln -s /usr/local/bin/forever /usr/bin/forever</div></pre></td></tr></table></figure></p>
+<h1 id="3-上传项目文件到服务器并执行"><a href="#3-上传项目文件到服务器并执行" class="headerlink" title="3.上传项目文件到服务器并执行"></a>3.上传项目文件到服务器并执行</h1><p>1.由于接口访问是http请求默认80端口，将代码中的端口监听<code>app.listen(3000);</code>改为<code>app.listen(80);</code></p>
+<p>2.压缩工程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zcvf [FileName.tar.gz] [DirName]</div></pre></td></tr></table></figure></p>
+<p>3.上传文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp -P [Port] [FileName.tar.gz] root@[IP]:[DirName]</div></pre></td></tr></table></figure></p>
+<p>4.登陆服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -p [Port] root@[IP]</div></pre></td></tr></table></figure></p>
+<p>5.到达目标目录后解压缩<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf [FileName.tar.gz]</div></pre></td></tr></table></figure></p>
+<p>6.进入工程目录，使用forever启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever start start.js</div></pre></td></tr></table></figure></p>
+<p>7.检查运行情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever start list</div></pre></td></tr></table></figure></p>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_4.png" alt=""><br>PS:这种是正常运行的状态，如果后面状态是STOPED的话说明运行失败，去项目目录下执行<code>node start</code>通过编译失败的信息来判断问题出在哪</p>
+<p>8.需要关闭运行时使用如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever stop 0</div></pre></td></tr></table></figure></p>
+<p>我使用的域名是codeest.me，运行效果如下~<br><img src="http://odck16ake.bkt.clouddn.com/web_api_3.png" alt=""><br>好了收工~可以用App里的Retrofit框架来调戏这个API了(/ω＼)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;承接上篇文章，为了随时随地都能访问接口现在需要将它部署到服务器，到了这一步你目前应该已经有写好的node.js项目 x1，能够登陆的服务器 x1，最好还有域名 x1，为服务器地址添加域名解析这里就不讨论了，下面一步步来部署&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="blog.codeest.moe/categories/Web/"/>
+    
+    
+      <category term="web" scheme="blog.codeest.moe/tags/web/"/>
+    
+      <category term="api" scheme="blog.codeest.moe/tags/api/"/>
+    
+      <category term="node.js" scheme="blog.codeest.moe/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用node.js + koa2搭建RESTful API</title>
+    <link href="blog.codeest.moe/2016/09/21/web-api-code/"/>
+    <id>blog.codeest.moe/2016/09/21/web-api-code/</id>
+    <published>2016-09-21T12:25:50.000Z</published>
+    <updated>2016-09-24T15:09:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<h1 id="1-选择语言与框架"><a href="#1-选择语言与框架" class="headerlink" title="1.选择语言与框架"></a>1.选择语言与框架</h1><p></p><p>考虑了3款比较热门的后端语言，PHP，JavaScript（node.js），Python，打算从中选择一款，分别比较了它们的特点，最后选定了用node.js来开发，原因有3点：<br><br>1.js目前比较泛用，本身既能写Web前端，又能通过node.js来写后端，还能通过ReactNative来写移动端，真的是居家旅行必备2333<br>2.node.js搭建的服务端在性能上很出色<br>3.我本人也对Web开发很感兴趣QwQ</p><br>然后就是框架的选择了，node.js的web框架主流的选择有express和koa，koa算是express的进化版，技术还是新的好~ koa!就决定是你了╮(￣▽￣)╭<p></p>
+<h1 id="2-编写node-js代码"><a href="#2-编写node-js代码" class="headerlink" title="2.编写node.js代码"></a>2.编写node.js代码</h1><p>这部分的内容还是比较多的，更推荐看专业的教程，推荐廖雪峰老师的JavaScript教程中的node.js部分，最后会手把手教你使用node.js构筑基于koa2的MVC架构的RESTful API项目，可以去下载demo扩展成满足自己项目需要的API<br></p>
+<p><big><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000" target="_blank" rel="external">教程地址</a></p></big><br>我写的简易<a href="https://github.com/codeestX/my-restful-api" target="_blank" rel="external">RESTful API demo</a>如下<br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_0.png" alt=""></p>
+<h1 id="3-分析API类型"><a href="#3-分析API类型" class="headerlink" title="3.分析API类型"></a>3.分析API类型</h1><p>常见的API类型有GET、POST、DELETE、PUT，这几种类型的写法在廖老师的教程中都有涉及，其中GET通常又分为3种类型：</p>
+<ul>
+<li>返回Json</li>
+<li>返回图片资源</li>
+<li>返回用于下载的文件</li>
+</ul>
+<p>教程中没有划分这几种GET类型，我在自己的demo中分别实践了一遍</p>
+<h3 id="3-1-返回Json"><a href="#3-1-返回Json" class="headerlink" title="3.1 返回Json"></a>3.1 返回Json</h3><p>这种类型最常用，直接返回可以转化为实体类的Json结构体<br>koa中type类型定义为<code>application/json</code> body直接传入一个对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /api/geeknews/version'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(&#123;</div><div class="line">        	<span class="attr">code</span>: version.getVersionCode(),</div><div class="line">        	<span class="attr">des</span>: version.getVersionDes()</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/json'</span>;</div><div class="line">                    ctx.response.body = &#123;</div><div class="line">                        <span class="attr">code</span>: <span class="number">200</span>,</div><div class="line">                        <span class="attr">message</span>: <span class="string">''</span>,</div><div class="line">                        <span class="attr">data</span>: data</div><div class="line">                    &#125;;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_1.png" alt=""></p>
+<h3 id="3-2-返回图片资源"><a href="#3-2-返回图片资源" class="headerlink" title="3.2 返回图片资源"></a>3.2 返回图片资源</h3><p>这种类型在Android端多用于Glide、Picasso等框架加载图片<br>koa中type类型定义为<code>.jpg</code>（也可以是其他图片类型） body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /img/test.jpg'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(imgPath)</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'.jpg'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_1.png" alt=""></p>
+<h3 id="3-3-返回用于下载的文件"><a href="#3-3-返回用于下载的文件" class="headerlink" title="3.3 返回用于下载的文件"></a>3.3 返回用于下载的文件</h3><p>这种类型在Android端多用于更新apk包，下载配置文件等<br>koa中type类型定义为<code>application/octet-stream</code> body传入读取到的文件流<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'GET /apk/geeknews.apk'</span>: <span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">        ctx.rest(</div><div class="line">            fs.createReadStream(filePath)</div><div class="line">        );</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ctx.rest = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">                    ctx.response.type = <span class="string">'application/octet-stream'</span>;</div><div class="line">                    ctx.response.body = data;</div><div class="line">                &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://odck16ake.bkt.clouddn.com/web_api_code_2.png" alt=""><br><img src="http://odck16ake.bkt.clouddn.com/web_api_code_3.png" alt=""></p>
+<p>这篇文章主要的目的在于让大家少走弯路，具体代码还是需要去参考上面列出的教程和demo，掌握了之后自己写一些简单的RESTful API还是很轻松的(´・ω・`)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为移动开发者，平时都是用服务端提供的API来做开发，但自己一直都对API的实现比较感兴趣(｡・`ω´･) 正好最近写了一款App，在做版本更新检测功能的时候打算不借助第三方SDK，用自己实现的RESTful API来完成这个功能&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="blog.codeest.moe/categories/Web/"/>
+    
+    
+      <category term="web" scheme="blog.codeest.moe/tags/web/"/>
+    
+      <category term="api" scheme="blog.codeest.moe/tags/api/"/>
+    
+      <category term="node.js" scheme="blog.codeest.moe/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, Blog</title>
+    <link href="blog.codeest.moe/2016/09/11/post0/"/>
+    <id>blog.codeest.moe/2016/09/11/post0/</id>
+    <published>2016-09-11T09:06:44.000Z</published>
+    <updated>2016-09-13T16:20:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客开张啦╮(￣▽￣)╭</p>
+<p>由 <a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a> 强力驱动  主题 - <a href="https://github.com/kaedea/hexo-theme-themia" target="_blank" rel="external">Themia</a><br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;博客开张啦╮(￣▽￣)╭&lt;/p&gt;
+&lt;p&gt;由 &lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;Hexo&lt;/a&gt; 强力驱动  主题 - &lt;a href=&quot;https://github.com/kaedea/hexo-theme-themia&quot;&gt;Themia&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
