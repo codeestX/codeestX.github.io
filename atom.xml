@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.codeest.moe/"/>
-  <updated>2016-12-15T16:48:31.000Z</updated>
+  <updated>2017-01-06T15:58:55.000Z</updated>
   <id>blog.codeest.moe/</id>
   
   <author>
@@ -14,6 +14,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2016年终小结</title>
+    <link href="blog.codeest.moe/2017/01/01/life-2016/"/>
+    <id>blog.codeest.moe/2017/01/01/life-2016/</id>
+    <published>2017-01-01T15:32:08.000Z</published>
+    <updated>2017-01-06T15:58:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<p>关于2016年，细想一下还是有不少东西值得记录的，总体来说算是比较充实的一年，就按照学习和生活两方面说吧。</p>
+<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>“疼痛使人清醒”，只有深刻的感受到了自己有多菜多平庸才会有努力的动力，这句话直白刺耳，但一定也是很多人的切身体会。在2016年年初当我连<code>GridView</code>都无法熟练使用的时候，我才知道自己既有的零碎Android知识已经无法满足开发需要了。是时候拟定计划，系统的开始学习之路了。</p>
+<h2 id="上半年"><a href="#上半年" class="headerlink" title="上半年"></a>上半年</h2><p>上半年规划用半年时间来巩固基础，而且是系统的、完整的巩固，毕竟无论怎样的开发工作，基础始终是重要的一环，它既是高级技术的根基也是日常开发提升效率的关键。这部分我是通过看书 + 看视频 + 看技术博客来学习的，下面再分别来说：</p>
+<h4 id="看书"><a href="#看书" class="headerlink" title="看书"></a>看书</h4><ul>
+<li>《Thinking in Java》，即Java编程思想，厚厚的一本，但没有冗余，每章节的内容都很有价值，算是一本介于Java基础与进阶之间的书，看到很多人说过这本书每次看完一遍的感受都不一样，17年打算再看一遍</li>
+<li>《Android开发艺术探索》，CSDN博主任玉刚（主席）写的一本Android进阶书，知识点覆盖比较全面，附带部分源码，不错的一本书，抽时间准备再来一遍</li>
+<li>《Android群英转》，CSDN博主徐宜生（医生）写的一本Android进阶书，感觉比艺术探索稍简单一些，读完也是很有收获</li>
+<li>《Android源码设计模式解析与实战》，非常好的一本书，作者算是手把手教你实践设计模式了，而且还例举出了设计模式在Android源码中的应用，源码和设计模式一起学习了</li>
+</ul>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><p>晚上看视频挺容易瞌睡的，所以有一定基础的情况下不太推荐花太多时间看视频，相比较看书和撸码这是一种比较被动的学习方式，只找自己感兴趣的视频看就好。对比过慕课网、极客学院、网易云公开课以后我选择了慕课网，大部分视频都是我比较感兴趣的，而且上面有很多Android界熟悉的面孔，比如Hyman鸿洋，这些CSDN博主常年写博客，能把技术内容表达的更易于理解。今天去慕课网看了下，累计学习时间50小时，不长不短吧…</p>
+<h4 id="技术博客"><a href="#技术博客" class="headerlink" title="技术博客"></a>技术博客</h4><p>这块没什么好说的了，不少知名Android博主写的博文都很不错，鸿洋，郭霖，任玉刚，徐宜生，夏秋明，老罗，stormzhang等等，和视频一样，找自己感兴趣或者欠缺的知识点看。</p>
+<h2 id="下半年"><a href="#下半年" class="headerlink" title="下半年"></a>下半年</h2><p>下半年是时候表演真正的技术了，把学到的知识亲手实践一遍才算真正的到碗里来，所以这半年时间一开始就拟定了去写一些开源项目以及掌握Android端的热门技术框架:  </p>
+<ul>
+<li>RxJava</li>
+<li>Retrofit</li>
+<li>Dagger2</li>
+<li>Realm</li>
+<li>DataBinding</li>
+<li>Kotlin</li>
+<li>MVP架构</li>
+<li>MVVM架构</li>
+</ul>
+<p>8月份开始断断续续写了阅读应用GeekNews，实践了一部分上面的技术栈，9月收工准备发布到简书和掘金，这算是我第一次把项目公开到技术社区，为了不被Android Dalao花式打脸(￣ε(#￣)☆╰╮(￣▽￣///)期间写的也是比较用心，发布一个月后收到了超过1000的star，这也是一开始根本没有想到的，非常激动，也让我这个懒癌晚期感受到了作为生产者的好：</p>
+<ul>
+<li>1.自己完成规划的技术实践 </li>
+<li>2.帮助别人，结识更多素不相识的人，互相交流，指出不足，共同进步 </li>
+<li>3.自己也能获得一丝成就感</li>
+</ul>
+<p>10月份发现自己对前端越发感兴趣，看到别人能搭建出好看的Web页面很羡慕，于是过了一遍HTML/CSS/JavaScript/Node的基础教程，在平时用来科学上网的服务器上用node &amp; koa2搭了GeekNews检测更新用的API，在github pages上用Hexo &amp; Themia搭了自己的站点，并做了一点微小的工作（<del>魔改</del>）  </p>
+<p>11月份逛dribbble时看到动效控件找到了灵感，过了一遍GcsSloop的Canvas系列教程巩固了一遍custom view相关的知识，花一周时间以及一张草稿纸写出了ENViews，发布一周后收到了1000+star以及android-arsenal，material UP的推荐邮件，还有Tesla OS组织的邀请，愈发让我感受到了开源的动力与魅力，也让我知道了和别人产生交流远比活在一个人的世界里更好</p>
+<p>12月份在维护GeekNews的新版本和规划2017年的计划，一开始写这个App的目的主要是为了把它作为新技术的实践载体，现在打算把它做得更具有一定的使用价值，做好一个面向程序员/极客的纯粹的阅读器，陆续加上了自己喜欢的掘金和V2EX板块，现在GeekNews已经有5个板块了，新闻、技术、福利、创意社区具在，希望大家能喜欢</p>
+<p>未来几年自己想深入学习的技术领域有：Android(移动端) + React(前端) + Node(后端)，重点还是放在深入Android上（这个可是拿来吃饭的！），目前自己对Android底层原理和一些框架源码的掌握还远远不够。在这一年的学习过程中也发现了很多Android大牛和厉害的开源项目，清楚的感受到了自己和他们仍然有很大的差距，要一直保持谦虚努力的心态才行，业余时间准备继续学习JavaScript（算是兴趣爱好，这也的确是一门很实用的语言），最后记录下2016年的Ranking图，希望17年能继续产出好的开源项目，也希望能由此结识更多人</p>
+<p><img src="http://odck16ake.bkt.clouddn.com/life_2016_1.png" alt=""></p>
+<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>生活上依然过着很宅的日子，每天看一集动漫就可以满足的那种(￣ˇ￣)</p>
+<h3 id="二次元-amp-ACG"><a href="#二次元-amp-ACG" class="headerlink" title="二次元 &amp; ACG"></a>二次元 &amp; ACG</h3><p>和小伙伴们去逛了一些展，3场Comicup，1场ChinaJoy，1场Bilibili Macro Link，都很热闹，买到一些小宅物也很开心  </p>
+<p>游戏方面基本在玩手游和音游，端游、moba都已经没什么兴趣了，上半年主要在玩百万氪金王，后来立绘被焚化局通告和谐了，实在不能忍，把这个玩了一年的游戏给弃了，也不用氪金了╮(╯▽╰)╭。国庆玩了一周阴阳师，刚开始觉得挺好玩的，很有特色的一款游戏，后来觉得太肝，后期重复性略大，也弃之。下半年偶尔和小伙伴们一起玩玩守望先锋，不错的游戏，暴雪出品，必属精品。</p>
+<h3 id="三次元"><a href="#三次元" class="headerlink" title="三次元"></a>三次元</h3><p>16年没怎么出门，只去了杭州、厦门，还有上海周边的一些小地方，周末看看电影看看书追追番，很喜欢《君名》，刷了两遍。17年如果有机会的话，国内想去成都/重庆旅游，国外想去日本旅游，不知道有没有机会实现心愿呢</p>
+<p><b>好吧就扯这么多了，再见2016，加油2017！</b></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hi, 2017  Bey, 2016&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="blog.codeest.moe/categories/Life/"/>
+    
+    
+      <category term="life" scheme="blog.codeest.moe/tags/life/"/>
+    
+      <category term="summary" scheme="blog.codeest.moe/tags/summary/"/>
+    
+  </entry>
   
   <entry>
     <title>《你的名字。》</title>
