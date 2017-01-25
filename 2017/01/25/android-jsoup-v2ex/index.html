@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Est的小窝">
+    <title>Jsoup抓取V2EX - Est的小窝</title>
+    <meta name="author" content="Est">
+    
+    
+        <link rel="icon" href="blog.codeest.moe/assets/images/kaede-avatar-k-50.png">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="前段时间给GeekNews集成V2EX板块，但是无奈官方API提供的很不全面，索性就用Jsoup来解析了">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Jsoup抓取V2EX">
+<meta property="og:url" content="blog.codeest.moe/2017/01/25/android-jsoup-v2ex/index.html">
+<meta property="og:site_name" content="Est的小窝">
+<meta property="og:description" content="前段时间给GeekNews集成V2EX板块，但是无奈官方API提供的很不全面，索性就用Jsoup来解析了">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/android_jsoup_v2ex/0.png">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/android_jsoup_v2ex/2.png">
+<meta property="og:updated_time" content="2017-01-25T15:19:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jsoup抓取V2EX">
+<meta name="twitter:description" content="前段时间给GeekNews集成V2EX板块，但是无奈官方API提供的很不全面，索性就用Jsoup来解析了">
+<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/android_jsoup_v2ex/0.png">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="blog.codeest.moe/assets/images/my_avatar.png"/>
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail7.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail7.png" />
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-aft8dyu0avaj6afnrxkykqzoptwooxw7g1l2i8ou7thalznvsmksashrqb06.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Est的小窝</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/my_avatar.png"/>
+            </a>
+            <span class="sidebar-profile-name">Estの小窝</span>
+            <span class="sidebar-profile-motto">Coder & ACGer</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-circle-thin"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-star-o"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-terminal"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/codeestX" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:codeest.dev@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-mars"></i>
+                    <span class="sidebar-button-desc">Friends</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/lab"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-flask"></i>
+                    <span class="sidebar-button-desc">Lab</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/donate"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-dollar"></i>
+                    <span class="sidebar-button-desc">Donate</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/bangumi"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-power-off"></i>
+                    <span class="sidebar-button-desc">Bangumi</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img_1.jpg');"
+             data-behavior="3">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Jsoup抓取V2EX
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Wed Jan 25 2017 01:05:41 GMT+0800">
+	
+		    Jan 25, 2017
+    	
+    </time>
+    
+        <span>IN </span>
+        
+    <a class="category-link" href="/categories/Android/">Android</a>
+
+
+    
+</div>
+
+    <h1 class="post-meta">
+    <br>
+            <span id="busuanzi_container_page_pv">View <span id="busuanzi_value_page_pv"></span> times.</span>
+    </h1>
+</div>
+
+            
+        </div>
+
+            <div id="main" data-behavior="3"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></h2><h1 id="Jsoup"><a href="#Jsoup" class="headerlink" title="Jsoup"></a>Jsoup</h1><p>Jsoup是Java的HTML解析器，可以通过类似jQuery的操作方法来解析出DOM结构中你需要的数据，对Android端而言，利用Jsoup可以给大部分网站做第三方客户端。<br>Jsoup最强大的莫过于它的元素选择器了，通过筛选语法可以获取到任意你需要的DOM树中的元素，下面是官方文档中的选择器语法：</p>
+<blockquote>
+<p>选择器概要（Selector overview）</p>
+<ul>
+<li>Tagname：通过标签查找元素（例如：a）</li>
+<li>ns|tag：通过标签在命名空间查找元素，例如：fb|name查找<fb:name>元素</fb:name></li>
+<li>id：通过ID查找元素，例如#logo</li>
+<li>.class：通过类型名称查找元素，例如.masthead</li>
+<li>[attribute]：带有属性的元素，例如[href]</li>
+<li>[^attr]：带有名称前缀的元素，例如[^data-]查找HTML5带有数据集（dataset）属性的元素</li>
+<li>[attr=value]：带有属性值的元素，例如[width=500]</li>
+<li>[attr^=value]，[attr$=value]，[attr<em>=value]：包含属性且其值以value开头、结尾或包含value的元素，例如[href</em>=/path/]</li>
+<li>[attr~=regex]：属性值满足正则表达式的元素，例如img[src~=(?i).(png|jpe?g)]</li>
+<li>：所有元素，例如*</li>
+</ul>
+<p>选择器组合方法</p>
+<ul>
+<li>el#id:：带有ID的元素ID，例如div#logo</li>
+<li>el.class：带类型的元素，例如. div.masthead</li>
+<li>el[attr]：包含属性的元素，例如a[href]</li>
+<li>任意组合：例如a[href].highlight</li>
+<li>ancestor child：继承自某祖（父）元素的子元素，例如.body p查找“body”块下的p元素</li>
+<li>parent &gt; child：直接为父元素后代的子元素，例如: div.content &gt; pf查找p元素，body &gt; * 查找body元素的直系子元素</li>
+<li>siblingA + siblingB：查找由同级元素A前导的同级元素，例如div.head + div</li>
+<li>siblingA ~ siblingX：查找同级元素A前导的同级元素X例如h1 ~ p</li>
+<li>el, el, el：多个选择器组合，查找匹配任一选择器的唯一元素，例如div.masthead, div.logo</li>
+</ul>
+<p>伪选择器（Pseudo selectors）</p>
+<ul>
+<li>:lt(n)：查找索引值（即DOM树中相对于其父元素的位置）小于n的同级元素，例如td:lt(3)</li>
+<li>:gt(n)：查找查找索引值大于n的同级元素，例如div p:gt(2)</li>
+<li>:eq(n) ：查找索引值等于n的同级元素，例如form input:eq(1)</li>
+<li>:has(seletor)：查找匹配选择器包含元素的元素，例如div:has(p)</li>
+<li>:not(selector)：查找不匹配选择器的元素，例如div:not(.logo)</li>
+<li>:contains(text)：查找包含给定文本的元素，大小写铭感，例如p:contains(jsoup)</li>
+<li>:containsOwn(text)：查找直接包含给定文本的元素</li>
+<li>:matches(regex)：查找其文本匹配指定的正则表达式的元素，例如div:matches((?i)login)</li>
+<li>:matchesOwn(regex)：查找其自身文本匹配指定的正则表达式的元素<br>注意：上述伪选择器是0-基数的，亦即第一个元素索引值为0，第二个元素index为1等</li>
+</ul>
+</blockquote>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>今天是主角是我平时经常去逛的<a href="https://www.v2ex.com/" target="_blank" rel="external">V2EX</a><br>首先看V2EX网站某个板块的结构，呈列表状，那么只要能解析其中一个item的结构即可</p>
+<p><img src="http://odck16ake.bkt.clouddn.com/android_jsoup_v2ex/0.png" alt=""></p>
+<p>找到其中一个item对应的源码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cell item"</span> <span class="attr">style</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            </div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">width</span>=<span class="string">"48"</span> <span class="attr">valign</span>=<span class="string">"top"</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/member/qile1"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"//cdn.v2ex.co/gravatar/03b6474fdca2de3813a9860d19acdaf8?s=48&amp;d=retro"</span> <span class="attr">class</span>=<span class="string">"avatar"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">align</span>=<span class="string">"default"</span> /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">width</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            </div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">width</span>=<span class="string">"auto"</span> <span class="attr">valign</span>=<span class="string">"middle"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"item_title"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/t/336709#reply10"</span>&gt;</span>threading 线程间通信如何控制线程运行及等待。<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sep5"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"small fade"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"votes"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"node"</span> <span class="attr">href</span>=<span class="string">"/go/python"</span>&gt;</span>Python<span class="tag">&lt;/<span class="name">a</span>&gt;</span> &amp;nbsp;•&amp;nbsp; <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/member/qile1"</span>&gt;</span>qile1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span> &amp;nbsp;•&amp;nbsp; 22 分钟前 &amp;nbsp;•&amp;nbsp; 最后回复来自 <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/member/sheep3"</span>&gt;</span>sheep3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">width</span>=<span class="string">"70"</span> <span class="attr">align</span>=<span class="string">"right"</span> <span class="attr">valign</span>=<span class="string">"middle"</span>&gt;</span></div><div class="line">                </div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/t/336709#reply10"</span> <span class="attr">class</span>=<span class="string">"count_livid"</span>&gt;</span>10<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">                </div><div class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>从上面的代码中可以看出，能获取到的信息有:</p>
+<ul>
+<li>头像url</li>
+<li>发帖者昵称</li>
+<li>最后回复时间</li>
+<li>最后回复者</li>
+<li>帖子所属节点</li>
+<li>回帖数</li>
+<li>帖子标题</li>
+<li>帖子ID</li>
+</ul>
+<p>定义与之对应的Java Bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicListBean</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String imgUrl;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String updateTime;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String lastUser;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String node;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> commentNum;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String title;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String topicId;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>好了，接下来就是通过筛选语法定义HTML DOM -&gt; Java Bean的映射关系了</p>
+<p>以解析标题为例子，需要筛选出的目标内容为<code>&lt;a href=&quot;/t/336709#reply10&quot;&gt;threading 线程间通信如何控制线程运行及等待。&lt;/a&gt;</code></p>
+<ul>
+<li>按照筛选语法的定义，带有class属性的标签可以通过<code>el.class</code>的方式引用，所以最外层的<code>&lt;div class=&quot;cell item&quot; style=&quot;&quot;&gt;</code>即写为<code>div.cell item</code>，但筛选语法规定class中不能出现空格，空格需要由<code>.</code>代替，所以需要改为<code>div.cell.item</code></li>
+<li>然后语法规定，继承自某祖（父）元素的子元素可以通过空格的方式获取，那么子元素层层深入，即<code>div.cell.item table tr td</code></li>
+<li>最后由title所在的span的class，获取该span，即<code>div.cell.item table tr td span.item_title</code>，取它的直接子元素a标签，即<code>div.cell.item table tr td span.item_title &gt; a</code></li>
+</ul>
+<p>同理写出其他元素的筛选语法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div.cell.item table tr td span.item_title &gt; a   <span class="comment">//标题</span></div><div class="line">div.cell.item table tr td img.avatar              <span class="comment">//头像</span></div><div class="line">div.cell.item table tr span.small.fade a.node    <span class="comment">//节点</span></div><div class="line">div.cell.item table tr a.count_livid          <span class="comment">//评论数</span></div><div class="line">div.cell.item table tr span.small.fade strong a  <span class="comment">//作者 &amp; 最后回复</span></div><div class="line">div.cell.item table tr span.small.fade           <span class="comment">//更新时间</span></div></pre></td></tr></table></figure></p>
+<h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1><p>这里开始，就要利用Jsoup的API来完整真正的解析了：</p>
+<ul>
+<li><code>Document dom = Jsoup.connect(host_url).timeout(10000).get();</code>,首先获取目标Web页面的整个DOM结构，这里需要传入url地址和连接超时时间，注意这一步由于是网络请求，需要在子线程中执行</li>
+<li><code>Elements itemElements = doc.select(&quot;div.cell.item&quot;);</code>根据上面的分析，这一步会从DOM中筛选出所有的目标item，<code>itemElements</code>是这些item的List集合</li>
+<li><code>Elements titleElements = itemElements.get(i).select(&quot;div.cell.item table tr td span.item_title &gt; a&quot;);</code>从List中取第i个item，并依照之前的分析，取到包含“标题“信息的a标签</li>
+<li><code>String title = titleElements.get(0).attr(&quot;href&quot;)</code>，取该a标签中href属性的值，即标题</li>
+<li>如果需要的字段不是标签的属性，而是标签的内容，比如解析帖子节点<code>&lt;a class=&quot;node&quot; href=&quot;/go/python&quot;&gt;Python&lt;/a&gt;</code>，需要获取的是a标签的内容<code>Python</code>，应该调用text方法，<code>String node = nodeElements.get(0).text()</code></li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1.在取最后回复者时需要注意，其父标签span下包含两个strong标签<code>&lt;strong&gt;&lt;a href=&quot;/member/qile1&quot;&gt;qile1&lt;/a&gt;&lt;/strong&gt; &amp;nbsp;•&amp;nbsp; 22 分钟前 &amp;nbsp;•&amp;nbsp; 最后回复来自 &lt;strong&gt;&lt;a href=&quot;/member/sheep3&quot;&gt;sheep3&lt;/a&gt;&lt;/strong&gt;</code>,前者是最后回复时间，后者是最后回复者，且两个标签没有id或class等标志，如果按照<code>div.cell.item table tr span.small.fade strong a</code>这种筛选器语法来筛选的话会一次取到两个strong中的a标签，所以仅想获取后者的话需要这样写来<code>nameElements.get(1).text()</code>取第二项</p>
+<p>2.在测试时发现解析有时会crash，调查后发现V2EX站点的item结构不是固定的，当帖子无人回复时DOM结构会不同，没有最后回复者、最后回复时间、评论数这三个信息，所以取这三条信息时要记得做额外判断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//存在没有 最后回复者、评论数、更新时间的情况</div><div class="line">                            if (nameElements.size() &gt; 1) &#123;</div><div class="line">                                bean.setLastUser(nameElements.get(1).text());</div><div class="line">                            &#125;</div><div class="line">                            if (commentElements.size() &gt; 0) &#123;</div><div class="line">                                bean.setCommentNum(Integer.valueOf(commentElements.get(0).text()));</div><div class="line">                            &#125;</div><div class="line">                            if (timeElements.size() &gt; 1) &#123;</div><div class="line">                                bean.setUpdateTime(parseTime(timeElements.get(1).text()));</div><div class="line">                            &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="最终代码"><a href="#最终代码" class="headerlink" title="最终代码"></a>最终代码</h3><p>配合RxJava，最终代码如下，这里也能看到RxJava用起来真的方便、结构清晰：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">Observable.just(VtexApis.TAB_HOST + type)</div><div class="line">          .subscribeOn(Schedulers.io())</div><div class="line">          .map(<span class="keyword">new</span> Func1&lt;String, Document&gt;() &#123;</div><div class="line">              <span class="meta">@Override</span></div><div class="line">              <span class="function"><span class="keyword">public</span> Document <span class="title">call</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">                  <span class="keyword">try</span> &#123;</div><div class="line">                      <span class="keyword">return</span> Jsoup.connect(s).timeout(<span class="number">10000</span>).get();</div><div class="line">                  &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                      LogUtil.d(e.toString());</div><div class="line">                      e.printStackTrace();</div><div class="line">                  &#125;</div><div class="line">                  <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">              &#125;</div><div class="line">          &#125;)</div><div class="line">          .filter(<span class="keyword">new</span> Func1&lt;Document, Boolean&gt;() &#123;</div><div class="line">              <span class="meta">@Override</span></div><div class="line">              <span class="function"><span class="keyword">public</span> Boolean <span class="title">call</span><span class="params">(Document document)</span> </span>&#123;</div><div class="line">                  <span class="keyword">return</span> document != <span class="keyword">null</span>;</div><div class="line">              &#125;</div><div class="line">          &#125;)</div><div class="line">          .map(<span class="keyword">new</span> Func1&lt;Document, List&lt;TopicListBean&gt;&gt;() &#123;</div><div class="line">              <span class="meta">@Override</span></div><div class="line">              <span class="function"><span class="keyword">public</span> List&lt;TopicListBean&gt; <span class="title">call</span><span class="params">(Document doc)</span> </span>&#123;</div><div class="line">                  List&lt;TopicListBean&gt; mList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">                  Elements itemElements = doc.select(<span class="string">"div.cell.item"</span>);    <span class="comment">//item根节点</span></div><div class="line">                  <span class="keyword">int</span> count = itemElements.size();</div><div class="line">                  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</div><div class="line">                      Elements titleElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr td span.item_title &gt; a"</span>);   <span class="comment">//标题</span></div><div class="line">                      Elements imgElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr td img.avatar"</span>);              <span class="comment">//头像</span></div><div class="line">                      Elements nodeElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr span.small.fade a.node"</span>);    <span class="comment">//节点</span></div><div class="line">                      Elements commentElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr a.count_livid"</span>);          <span class="comment">//评论数</span></div><div class="line">                      Elements nameElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr span.small.fade strong a"</span>);  <span class="comment">//作者 &amp; 最后回复</span></div><div class="line">                      Elements timeElements = itemElements.get(i).select(<span class="string">"div.cell.item table tr span.small.fade"</span>);           <span class="comment">//更新时间</span></div><div class="line"></div><div class="line">                      TopicListBean bean = <span class="keyword">new</span> TopicListBean();</div><div class="line"></div><div class="line">                      <span class="keyword">if</span> (titleElements.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">                          bean.setTitle(titleElements.get(<span class="number">0</span>).text());</div><div class="line">                          bean.setTopicId(parseId(titleElements.get(<span class="number">0</span>).attr(<span class="string">"href"</span>)));</div><div class="line">                      &#125;</div><div class="line">                      <span class="keyword">if</span> (imgElements.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">                          bean.setImgUrl(parseImg(imgElements.get(<span class="number">0</span>).attr(<span class="string">"src"</span>)));</div><div class="line">                      &#125;</div><div class="line">                      <span class="keyword">if</span> (nodeElements.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">                          bean.setNode(nodeElements.get(<span class="number">0</span>).text());</div><div class="line">                      &#125;</div><div class="line">                      <span class="keyword">if</span> (nameElements.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">                          bean.setName(nameElements.get(<span class="number">0</span>).text());</div><div class="line">                      &#125;</div><div class="line">                      <span class="comment">//存在没有 最后回复者、评论数、更新时间的情况</span></div><div class="line">                      <span class="keyword">if</span> (nameElements.size() &gt; <span class="number">1</span>) &#123;</div><div class="line">                          bean.setLastUser(nameElements.get(<span class="number">1</span>).text());</div><div class="line">                      &#125;</div><div class="line">                      <span class="keyword">if</span> (commentElements.size() &gt; <span class="number">0</span>) &#123;</div><div class="line">                          bean.setCommentNum(Integer.valueOf(commentElements.get(<span class="number">0</span>).text()));</div><div class="line">                      &#125;</div><div class="line">                      <span class="keyword">if</span> (timeElements.size() &gt; <span class="number">1</span>) &#123;</div><div class="line">                          bean.setUpdateTime(parseTime(timeElements.get(<span class="number">1</span>).text()));</div><div class="line">                      &#125;</div><div class="line"></div><div class="line">                      mList.add(bean);</div><div class="line">                  &#125;</div><div class="line">                  <span class="keyword">return</span> mList;</div><div class="line">              &#125;</div><div class="line">          &#125;)</div><div class="line">          .observeOn(AndroidSchedulers.mainThread())</div><div class="line">          .subscribe(<span class="keyword">new</span> Action1&lt;List&lt;TopicListBean&gt;&gt;() &#123;</div><div class="line">              <span class="meta">@Override</span></div><div class="line">              <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(List&lt;TopicListBean&gt; mList)</span> </span>&#123;</div><div class="line">                  mView.showContent(mList);</div><div class="line">              &#125;</div><div class="line">          &#125;, <span class="keyword">new</span> Action1&lt;Throwable&gt;() &#123;</div><div class="line">              <span class="meta">@Override</span></div><div class="line">              <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Throwable throwable)</span> </span>&#123;</div><div class="line">                  mView.showError(<span class="string">"数据加载失败"</span>);</div><div class="line">              &#125;</div><div class="line">          &#125;);</div></pre></td></tr></table></figure>
+<p>运行效果<br><img src="http://odck16ake.bkt.clouddn.com/android_jsoup_v2ex/2.png" alt=""><br>项目地址<a href="https://github.com/codeestX/GeekNews" target="_blank" rel="external">GeekNews</a></p>
+<p>收工跑路~٩(ˊᗜˋ*)و</p>
+<h3 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h3><p><a href="http://www.cnblogs.com/chenying99/archive/2013/01/04/2844615.html" target="_blank" rel="external">使用 jsoup 对 HTML 文档进行解析和操作</a><br><a href="http://blog.csdn.net/atco/article/details/7834489" target="_blank" rel="external">jsoup select 选择器</a></p>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/android/">android</a> <a class="tag tag--primary tag--small t-link" href="/tags/jsoup/">jsoup</a> <a class="tag tag--primary tag--small t-link" href="/tags/v2ex/">v2ex</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/01/life-2016/" data-tooltip="2016年终小结">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">给作者投食戳这里OwO</a>
+        <br>
+    </div>
+    <div id="donate_guide" class="donate_bar center hidden" >
+        <!-- 支付宝打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/01/25/android-jsoup-v2ex/"
+     data-title="Jsoup抓取V2EX" data-url="blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <div id="footer-img"></div>
+    <span class="copyrights">
+        <p>
+            Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>.
+            Theme - <a href="https://github.com/kaedea/hexo-theme-themia">Themia</a>.<br>
+            <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors.</span>
+            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span>
+            <span id="times"></span><br>
+            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>.
+        </p>
+        Copyrights &copy; 2017 Est. All Rights Reserved.٩(ˊᗜˋ*)و
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/01/life-2016/" data-tooltip="2016年终小结">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/01/25/android-jsoup-v2ex/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/my_avatar.png"/>
+        
+            <h4 id="about-card-name">Est</h4>
+        
+            <h5 id="about-card-bio"><p>Coder &amp; ACGer<br/><div><a href='http://me.codeest.moe'>http://me.codeest.moe</a> for more details</div></p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android Develper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                上海
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/scrip-e1ju9q8qcpyjcb2ru3vukxojjrinm0ahkx0m4nvqoeaxq10xexen6t99isw2.min.js"></script>
+<!--SCRIPTS END-->
+<!--BUSUANZI-->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+<!--BUSUANZI END-->
+<!--PANGU AUTO SPACE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
+<!--PANGU AUTO SPACE END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'codeest'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+                ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
+                ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <script type="text/javascript">
+            if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+            else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+            function hookDUOSHUO_tp(){
+                var _D_post=DUOSHUO.templates.post
+                DUOSHUO.templates.post=function (e,t){
+                    var rs=_D_post(e,t);
+                    if(e.post.agent&&/^Mozilla/.test(e.post.agent))
+                        rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
+                    return rs;
+                }
+            }
+            function show_ua(string){
+                $.ua.set(string);
+                var sua=$.ua;
+                if(sua.os.version=='x86_64')sua.os.version='x64';
+                return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>'+'<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>';
+            }
+        </script>
+    
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
+    </script>
+
+    <script language=javascript>
+        function show_date_time()
+        {
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay = new Date("9/11/2016 0:00:00");today=new Date();timeold=(today.getTime() - BirthDay.getTime());sectimeold=timeold/1000;secondsold=Math.floor(sectimeold);msPerDay=24*60*60*1000;e_daysold=timeold/msPerDay;daysold=Math.floor(e_daysold); e_hrsold=(e_daysold-daysold)*24;hrsold=Math.floor(e_hrsold); e_minsold=(e_hrsold-hrsold)*60; minsold=Math.floor((e_hrsold-hrsold)*60); seconds=Math.floor((e_minsold-minsold)*60);
+            times.innerHTML="<span>Blog age:"+daysold+ " day " +hrsold+" h "+minsold+" m "+seconds+" s."+"</span>";
+        }
+        show_date_time();
+    </script>
+
+</html>
