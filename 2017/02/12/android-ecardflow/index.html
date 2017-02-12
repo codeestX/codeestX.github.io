@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Est的小窝">
+    <title>ECardFlow踩坑记 - Est的小窝</title>
+    <meta name="author" content="Est">
+    
+    
+        <link rel="icon" href="blog.codeest.moe/assets/images/kaede-avatar-k-50.png">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="上个月写了个开源库ECardFlow，期间又是花式踩坑，不过踩坑大法好，填坑全是收获~">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="ECardFlow踩坑记">
+<meta property="og:url" content="blog.codeest.moe/2017/02/12/android-ecardflow/index.html">
+<meta property="og:site_name" content="Est的小窝">
+<meta property="og:description" content="上个月写了个开源库ECardFlow，期间又是花式踩坑，不过踩坑大法好，填坑全是收获~">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/Github/GIF.gif">
+<meta property="og:image" content="http://odck16ake.bkt.clouddn.com/android_ecardflow_0.png">
+<meta property="og:updated_time" content="2017-02-12T16:29:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ECardFlow踩坑记">
+<meta name="twitter:description" content="上个月写了个开源库ECardFlow，期间又是花式踩坑，不过踩坑大法好，填坑全是收获~">
+<meta name="twitter:image" content="http://odck16ake.bkt.clouddn.com/Github/GIF.gif">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="blog.codeest.moe/assets/images/my_avatar.png"/>
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail9.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail9.png" />
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-aft8dyu0avaj6afnrxkykqzoptwooxw7g1l2i8ou7thalznvsmksashrqb06.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Est的小窝</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/my_avatar.png"/>
+            </a>
+            <span class="sidebar-profile-name">Estの小窝</span>
+            <span class="sidebar-profile-motto">Coder & ACGer</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-circle-thin"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-star-o"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-terminal"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/codeestX" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:codeest.dev@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-mars"></i>
+                    <span class="sidebar-button-desc">Friends</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="http://lab.codeest.moe" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-flask"></i>
+                    <span class="sidebar-button-desc">Lab</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/donate"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-dollar"></i>
+                    <span class="sidebar-button-desc">Donate</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/bangumi"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-power-off"></i>
+                    <span class="sidebar-button-desc">Bangumi</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img_1.jpg');"
+             data-behavior="3">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            ECardFlow踩坑记
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Sun Feb 12 2017 02:04:38 GMT+0800">
+	
+		    Feb 12, 2017
+    	
+    </time>
+    
+        <span>IN </span>
+        
+    <a class="category-link" href="/categories/Android/">Android</a>
+
+
+    
+</div>
+
+    <h1 class="post-meta">
+    <br>
+            <span id="busuanzi_container_page_pv">View <span id="busuanzi_value_page_pv"></span> times.</span>
+    </h1>
+</div>
+
+            
+        </div>
+
+            <div id="main" data-behavior="3"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>日常逛Material UP，发现了Leo Leung设计的<a href="https://ios.uplabs.com/posts/multiple-card-flow" target="_blank" rel="external">multiple-card-flow</a>,觉得效果不错于是写了对应的效果库<a href="https://github.com/codeestX/ECardFlow" target="_blank" rel="external">ECardFlow</a>，随后尾随到他的dribbble，看到了<a href="https://dribbble.com/shots/2772170-ToFind-Concept-Controller" target="_blank" rel="external">ToFind-Concept-Controller</a>，感觉也不错，索性又做了ECardFlowLayout一起放到了这个库里  </p>
+<p>ECardFlow是一个用于复数卡片滑动与展开效果的自定义ViewPager控件<br>ECardFlowLayout是一个为ViewPager提供多种联动背景效果的布局，本体是FrameLayout  </p>
+<p>这篇文章主要是记录下开发过程中踩过的坑，所以下面就按要点来说了</p>
+<h1 id="ViewPager"><a href="#ViewPager" class="headerlink" title="ViewPager"></a>ViewPager</h1><ul>
+<li>在<code>ViewPager</code>中同时显示多个子page，需要给<code>ViewPager</code>的父布局加上属性<code>android:clipChildren=&quot;false&quot;</code>，确保不会将超出<code>ViewPager</code>范围的子视图裁剪</li>
+<li>使用<code>ViewPager</code>的<code>setOffscreenPageLimit(mPreloadPageNum);</code>来预先加载屏幕外的子page视图，否则当滑动到屏幕内才开始加载会有一个闪烁的过程，造成不好的体验，这个预加载的页面值也不宜设置的太高，会增加内存开销</li>
+<li><code>ECardFlow</code>是不支持滚动的，只支持滑动切换，所以不会跟随手指移动悬停，那么就要重写<code>touchEvent</code>系列方法来屏蔽<code>ViewPager</code>自带的滑动事件处理，这点下面再谈。页面切换使用的是<code>setCurrentItem</code>方法，<code>ViewPager</code>的源码中能看到这个方法默认的切换时间是200ms，速度太快了不利于动画效果的展示，所以我们需要通过反射在运行时动态的修改滚动时间</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initSwitchSpeed</span><span class="params">(<span class="keyword">float</span> scrollFactor)</span> </span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            Class&lt;?&gt; viewpager = ViewPager.class;</div><div class="line">            Field scroller = viewpager.getDeclaredField(<span class="string">"mScroller"</span>);</div><div class="line">            scroller.setAccessible(<span class="keyword">true</span>);</div><div class="line">            Field interpolator = viewpager.getDeclaredField(<span class="string">"sInterpolator"</span>);</div><div class="line">            interpolator.setAccessible(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">            mScroller = <span class="keyword">new</span> ScrollerCustomDuration(getContext(),</div><div class="line">                    (Interpolator) interpolator.get(<span class="keyword">null</span>));</div><div class="line">            mScroller.setScrollFactor(scrollFactor);</div><div class="line">            scroller.set(<span class="keyword">this</span>, mScroller);</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h1 id="PageTransformer"><a href="#PageTransformer" class="headerlink" title="PageTransformer"></a>PageTransformer</h1><p><img src="http://odck16ake.bkt.clouddn.com/Github/GIF.gif" alt=""></p>
+<p>可以看到ECardFlow在左右切换页面时会有一个绕Y轴立体旋转的效果，只需要自定义一个<code>ViewPager.PageTransformer</code>的接口实现类即可，实现接口中的<code>transformPage</code>方法，根据参数中当前页面的位置计算rotateY值赋给page，<code>page.setRotationY(mFraction * mMaxRotateY)</code>，最后给<code>ViewPager</code>设置这个Transformer<code>setPageTransformer(true, mTransformer);</code>。那么旋转角度的比率<code>mFraction</code>是怎么控制的呢？仔细观察效果可以看到，对一个页面而言在滑动起始时旋转角度为零，滑到下一个页面位置的过程中，角度先逐渐变大，到达中间位置时达到最大，然后逐渐变小，到达下一个页面位置时角度归零，至此完成一个滑动周期，后面继续滑动时依然保持这个规律。举个栗子，假如当前page的position是1，当position从1滑到1.5时角度逐渐变大，1.5到达峰值，随后下降直到position为2。用一个取绝对值的正弦函数来拟合这个过程不是正好吗！且一个滑动周期对应正弦函数上的半个周期，能计算出正弦函数的周期值是2，由此写出公式：  </p>
+<p><img src="http://odck16ake.bkt.clouddn.com/android_ecardflow_0.png" alt=""></p>
+<p><code>float mFraction = mDirection * (float) Math.abs(Math.sin(Math.PI * position));</code></p>
+<p>其中<code>mDirection</code>是当前滑动的方向，向右滑动时向正方向旋转，rotateY值为正，反之为负，完整代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">transformPage</span><span class="params">(View page, <span class="keyword">float</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">final</span> <span class="keyword">float</span> height = page.getHeight();</div><div class="line">        <span class="keyword">final</span> <span class="keyword">float</span> width = page.getWidth();</div><div class="line">        page.setPivotY(<span class="number">0.5f</span> * height);</div><div class="line">        page.setPivotX(<span class="number">0.5f</span> * width);</div><div class="line">        <span class="keyword">if</span> (position &gt;= -<span class="number">2</span> &amp;&amp; position &lt;= <span class="number">2</span>) &#123;</div><div class="line">            <span class="keyword">float</span> mFraction = mDirection * (<span class="keyword">float</span>) Math.abs(Math.sin(Math.PI * position));</div><div class="line">            page.setRotationY(mFraction * mMaxRotateY);</div><div class="line">            page.setScaleX(PAGE_SCALE);</div><div class="line">            page.setScaleY(PAGE_SCALE);</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h1 id="TouchEvent"><a href="#TouchEvent" class="headerlink" title="TouchEvent"></a>TouchEvent</h1><p>处理手势最重要的是理清思路，明确什么时候该拦截事件、消耗事件或分发原事件处理<br>重写<code>onInterceptTouchEvent</code>，如果当前ECardFlow是未展开状态的话则拦截滑动事件，交由<code>onTouchEvent</code>处理，如果是展开状态的话则不拦截，由优先级更高的子控件来处理事件，在demo中是由<code>RecyclerView</code>来处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> action = event.getAction();</div><div class="line">        <span class="keyword">switch</span> (action) &#123;</div><div class="line">            <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">                <span class="keyword">if</span> (isSwitching) &#123;</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">                mInterLastX = (<span class="keyword">int</span>) event.getRawX();</div><div class="line">                mInterLastY = (<span class="keyword">int</span>) event.getRawY();</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">                <span class="keyword">return</span> !isExpanding;</div><div class="line">            <span class="keyword">case</span> MotionEvent.ACTION_UP:</div><div class="line">                mLastX = <span class="number">0</span>;</div><div class="line">                mLastY = <span class="number">0</span>;</div><div class="line">                mInterLastX = <span class="number">0</span>;</div><div class="line">                mInterLastY = <span class="number">0</span>;</div><div class="line">                hasReset = <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onInterceptTouchEvent(event);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>重写<code>onTouchEvent</code>，ECardFlow展开状态下自身不处理事件，否则滑动时判断左右方向来做切换，判断Y轴方向触发上滑来展开，若展开模式设置为点击展开，则是在手指离开屏幕时处理展开。中间加了一些标志位，主要判断当前切换或展开过程是否完成，防止重复执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">    public boolean onTouchEvent(MotionEvent event) &#123;</div><div class="line">        if (isExpanding) &#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        int action = event.getAction();</div><div class="line">            switch (action) &#123;</div><div class="line">                case MotionEvent.ACTION_MOVE:</div><div class="line">                    if(mLastX == 0) &#123;</div><div class="line">                        mLastX = (int) event.getRawX();</div><div class="line">                    &#125;</div><div class="line">                    if(mLastY == 0) &#123;</div><div class="line">                        mLastY = (int) event.getRawY();</div><div class="line">                    &#125;</div><div class="line">                    int mCurX = (int) event.getRawX();</div><div class="line">                    int mCurY = (int) event.getRawY();</div><div class="line">                    if (Math.abs(mCurX - mLastX) &gt; mSlop &amp;&amp; hasReset) &#123;</div><div class="line">                        hasReset = false;</div><div class="line">                        if (mCurX &gt; mLastX) &#123;</div><div class="line">                            gotoLast();</div><div class="line">                        &#125; else &#123;</div><div class="line">                            gotoNext();</div><div class="line">                        &#125;</div><div class="line">                    &#125; else if(mExpandMode == SLIDE_UP_TO_EXPAND &amp;&amp; mLastY - mCurY &gt; mSlop &amp;&amp; hasReset &amp;&amp; !isSwitching) &#123;</div><div class="line">                        hasReset = false;</div><div class="line">                        expand();</div><div class="line">                    &#125;</div><div class="line">                    break;</div><div class="line">                case MotionEvent.ACTION_UP:</div><div class="line">                    int mUpX = (int) event.getRawX();</div><div class="line">                    int mUpY = (int) event.getRawY();</div><div class="line">                    if (mExpandMode == CLICK_TO_EXPAND &amp;&amp; Math.abs(mUpX - mInterLastX) &lt;= mSlop &amp;&amp; Math.abs(mUpY - mInterLastY) &lt;= mSlop &amp;&amp; !isSwitching) &#123;</div><div class="line">                        expand();</div><div class="line">                    &#125;</div><div class="line">                    mLastX = 0;</div><div class="line">                    mLastY = 0;</div><div class="line">                    hasReset = true;</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            return true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="PaddingBottom"><a href="#PaddingBottom" class="headerlink" title="PaddingBottom"></a>PaddingBottom</h1><p>兴高采烈的撸完了代码，发现ECardFlow展开后将RecyclerView滑动到最底部会显示不全，WTF？！仔细分析发现，由于展开效果是基于Scale动画的，父布局的大小不会变化，放大后的RecyclerView有一部分已经在屏幕底部之外了，所以滑动到最底部时会暴露出显示不全的感觉，我们需要把这部分屏幕外的内容给“顶”回屏幕内，即计算这部分内容的高度，增加对应大小的<code>paddingBottom</code>，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//计算额外的paddingBottom的大小</span></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">getExtraPaddingBottom</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (getHeight() * mRate &gt; DimenUtils.getScreenHeight(getContext().getApplicationContext())) &#123;</div><div class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>) ((getHeight() * mRate - DimenUtils.getScreenHeight(getContext().getApplicationContext())) / mRate);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span>  <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//展开动画结束后增加这段额外的paddingBottom</span></div><div class="line">anim.addListener(<span class="keyword">new</span> AnimatorListenerAdapter() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationEnd</span><span class="params">(Animator animation)</span> </span>&#123;</div><div class="line">                ECardFlow.<span class="keyword">this</span>.setPadding(</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingLeft(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingTop(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingRight(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingBottom() + getExtraPaddingBottom());</div><div class="line">                <span class="keyword">super</span>.onAnimationEnd(animation);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line"><span class="comment">//收缩动画开始时减去这段额外的paddingBottom        </span></div><div class="line">anim.addListener(<span class="keyword">new</span> AnimatorListenerAdapter() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationStart</span><span class="params">(Animator animation)</span> </span>&#123;</div><div class="line">                ECardFlow.<span class="keyword">this</span>.setPadding(</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingLeft(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingTop(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingRight(),</div><div class="line">                        ECardFlow.<span class="keyword">this</span>.getPaddingBottom() - getExtraPaddingBottom());</div><div class="line">                <span class="keyword">super</span>.onAnimationEnd(animation);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<h1 id="Bitmap"><a href="#Bitmap" class="headerlink" title="Bitmap"></a>Bitmap</h1><p>ECardFlowLayout使用LruCache来管理Bitmap，LruCache本身并不具有缓存Bitmap的能力，它只是一个给定大小后可以依照Lru算法，在达到容量上限时优先移除最近最久未使用的对象的容器。<br>使用LruCache时可以重写3个重要方法：</p>
+<ul>
+<li><code>sizeOf</code>用于返回当前对象占据的容器容量，如果LruCache创建时传入的缓存空间大小是以内存大小为单位的话，这里也要返回对象占据的内存大小，比如<code>Bitmap</code>的大小<code>value.getBitmap().getByteCount()</code>。如果创建时是以数量为单位的话，这里直接返回1即可。</li>
+<li><code>entryRemoved</code>是对象从LruCache中移除时产生的回调，需要在这里做回收处理，但是需要注意的是在这里调用<code>bitmap.recycler()</code>要根据实际情况考虑，假如该bitmap从LruCache移除时仍在界面上显示，直接调用<code>recycler()</code>可能会导致问题，具体该在什么时候回收bitmap下面再详谈</li>
+<li><code>create</code>是<code>mLruCache.get(key)</code>从当前缓存中未取到所需对象时才会调用的方法，此时get方法会把新创建的对象返回，如果不重写该方法就可能会返回null，需要做额外的判空处理  </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">mLruCache = <span class="keyword">new</span> LruCache&lt;String, RecyclingBitmapDrawable&gt;(cacheSize) &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">int</span> <span class="title">sizeOf</span><span class="params">(String key, RecyclingBitmapDrawable value)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> value.getBitmap().getByteCount() / <span class="number">1024</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">entryRemoved</span><span class="params">(<span class="keyword">boolean</span> evicted, String key, RecyclingBitmapDrawable oldValue, RecyclingBitmapDrawable newValue)</span> </span>&#123;</div><div class="line">                <span class="keyword">super</span>.entryRemoved(evicted, key, oldValue, newValue);</div><div class="line">                <span class="keyword">if</span> (evicted &amp;&amp; oldValue != <span class="keyword">null</span>) &#123;</div><div class="line">                    oldValue.setIsCached(<span class="keyword">false</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">protected</span> RecyclingBitmapDrawable <span class="title">create</span><span class="params">(String key)</span> </span>&#123;</div><div class="line">                RecyclingBitmapDrawable bitmap = <span class="keyword">new</span> RecyclingBitmapDrawable(getResources(), mProvider.onProvider(Integer.valueOf(key)));</div><div class="line">                <span class="keyword">if</span> (bitmap.getBitmap() == <span class="keyword">null</span>)</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">                bitmap.setIsCached(<span class="keyword">true</span>);</div><div class="line">                <span class="keyword">return</span> bitmap;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div></pre></td></tr></table></figure>
+<p>现在承接上面，继续说一说bitmap应该在什么时候回收，这里定义了一个<code>RecyclingBitmapDrawable</code>来负责判断回收时机  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecyclingBitmapDrawable</span> <span class="keyword">extends</span> <span class="title">BitmapDrawable</span> </span>&#123;</div><div class="line"></div><div class="line">	 <span class="comment">//记录缓存相关的引用数</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mCacheRefCount = <span class="number">0</span>;</div><div class="line">    <span class="comment">//记录显示相关的引用数</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDisplayRefCount = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> mHasBeenDisplayed;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RecyclingBitmapDrawable</span><span class="params">(Resources res, Bitmap bitmap)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(res, bitmap);</div><div class="line">    &#125;</div><div class="line">	 </div><div class="line">	 <span class="comment">//每当有ImageView等使用该Bitmap时就传入true让引用数加一，</span></div><div class="line">	 <span class="comment">//反之当不再使用时传入false让引用数减一，每次引用数发生变化</span></div><div class="line">	 <span class="comment">//都要判断是否应该回收</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIsDisplayed</span><span class="params">(<span class="keyword">boolean</span> isDisplayed)</span> </span>&#123;</div><div class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (isDisplayed) &#123;</div><div class="line">                mDisplayRefCount++;</div><div class="line">                mHasBeenDisplayed = <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                mDisplayRefCount--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        checkState();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">	 <span class="comment">//每当有LruCache等容器存入该Bitmap时就传入true让引用数加</span></div><div class="line">	 <span class="comment">//一，反之从容器中移除时传入false让引用数减一，每次引用数发</span></div><div class="line">	 <span class="comment">//生变化都要判断是否应该回收</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIsCached</span><span class="params">(<span class="keyword">boolean</span> isCached)</span> </span>&#123;</div><div class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (isCached) &#123;</div><div class="line">                mCacheRefCount++;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                mCacheRefCount--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        checkState();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">	 <span class="comment">//判断当前是否可以回收，当两个引用参数都为0时表示既不在界面上</span></div><div class="line">	 <span class="comment">//显示，也不在缓存容器中，此时就可以回收了</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">checkState</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mCacheRefCount &lt;= <span class="number">0</span> &amp;&amp; mDisplayRefCount &lt;= <span class="number">0</span> &amp;&amp; mHasBeenDisplayed</div><div class="line">                &amp;&amp; hasValidBitmap()) &#123;</div><div class="line">            getBitmap().recycle();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">synchronized</span> <span class="keyword">boolean</span> <span class="title">hasValidBitmap</span><span class="params">()</span> </span>&#123;</div><div class="line">        Bitmap bitmap = getBitmap();</div><div class="line">        <span class="keyword">return</span> bitmap != <span class="keyword">null</span> &amp;&amp; !bitmap.isRecycled();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面注释写的已经很详细了，因此在<code>LruCache</code>的<code>entryRemoved</code>方法中应该执行一次<code>recyclingBitmapDrawable(false);</code>，而不是直接回收bitmap。在代码其他合适的地方用<code>setIsCached</code>和<code>setIsDisplayed</code>方法记录引用数就能让bitmap在正确的时机回收。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>OK收工~ 回顾一下这个项目还是用到不少知识点的，上面的介绍如果有疏漏或者错误也欢迎指出，更多详情戳repo地址<a href="https://github.com/codeestX/ECardFlow" target="_blank" rel="external">ECardFlow</a></p>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/android/">android</a> <a class="tag tag--primary tag--small t-link" href="/tags/bitmap/">bitmap</a> <a class="tag tag--primary tag--small t-link" href="/tags/ecardflow/">ecardflow</a> <a class="tag tag--primary tag--small t-link" href="/tags/viewpager/">viewpager</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/25/acg-music-game/" data-tooltip="那些年我玩过的音游">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">给作者投食戳这里OwO</a>
+        <br>
+    </div>
+    <div id="donate_guide" class="donate_bar center hidden" >
+        <!-- 支付宝打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/12/android-ecardflow/"
+     data-title="ECardFlow踩坑记" data-url="blog.codeest.moe/2017/02/12/android-ecardflow/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <div id="footer-img"></div>
+    <span class="copyrights">
+        <p>
+            Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>.
+            Theme - <a href="https://github.com/kaedea/hexo-theme-themia">Themia</a>.<br>
+            <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors.</span>
+            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span>
+            <span id="times"></span><br>
+            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>.
+        </p>
+        Copyrights &copy; 2017 Est. All Rights Reserved.٩(ˊᗜˋ*)و
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/25/acg-music-game/" data-tooltip="那些年我玩过的音游">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/12/android-ecardflow/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/my_avatar.png"/>
+        
+            <h4 id="about-card-name">Est</h4>
+        
+            <h5 id="about-card-bio"><p>Coder &amp; ACGer<br/><div><a href='http://me.codeest.moe'>http://me.codeest.moe</a> for more details</div></p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android Develper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                上海
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/scrip-e1ju9q8qcpyjcb2ru3vukxojjrinm0ahkx0m4nvqoeaxq10xexen6t99isw2.min.js"></script>
+<!--SCRIPTS END-->
+<!--BUSUANZI-->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+<!--BUSUANZI END-->
+<!--PANGU AUTO SPACE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
+<!--PANGU AUTO SPACE END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'codeest'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+                ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
+                ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <script type="text/javascript">
+            if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+            else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+            function hookDUOSHUO_tp(){
+                var _D_post=DUOSHUO.templates.post
+                DUOSHUO.templates.post=function (e,t){
+                    var rs=_D_post(e,t);
+                    if(e.post.agent&&/^Mozilla/.test(e.post.agent))
+                        rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
+                    return rs;
+                }
+            }
+            function show_ua(string){
+                $.ua.set(string);
+                var sua=$.ua;
+                if(sua.os.version=='x86_64')sua.os.version='x64';
+                return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>'+'<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>';
+            }
+        </script>
+    
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
+    </script>
+
+    <script language=javascript>
+        function show_date_time()
+        {
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay = new Date("9/11/2016 0:00:00");today=new Date();timeold=(today.getTime() - BirthDay.getTime());sectimeold=timeold/1000;secondsold=Math.floor(sectimeold);msPerDay=24*60*60*1000;e_daysold=timeold/msPerDay;daysold=Math.floor(e_daysold); e_hrsold=(e_daysold-daysold)*24;hrsold=Math.floor(e_hrsold); e_minsold=(e_hrsold-hrsold)*60; minsold=Math.floor((e_hrsold-hrsold)*60); seconds=Math.floor((e_minsold-minsold)*60);
+            times.innerHTML="<span>Blog age:"+daysold+ " day " +hrsold+" h "+minsold+" m "+seconds+" s."+"</span>";
+        }
+        show_date_time();
+    </script>
+
+</html>
