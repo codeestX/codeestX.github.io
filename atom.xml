@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.codeest.moe/"/>
-  <updated>2017-02-27T18:21:49.000Z</updated>
+  <updated>2017-02-28T17:01:16.000Z</updated>
   <id>blog.codeest.moe/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="blog.codeest.moe/2017/02/26/android-geeknews/"/>
     <id>blog.codeest.moe/2017/02/26/android-geeknews/</id>
     <published>2017-02-25T16:24:53.000Z</published>
-    <updated>2017-02-27T18:21:49.000Z</updated>
+    <updated>2017-02-28T17:01:16.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt --></h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>MVP是Android端的一种架构模式，RRD = Rxjava + Retrofit + Dagger2这套全家桶，<a href="https://github.com/codeestX/GeekNews" target="_blank" rel="external">GeekNews</a>就是基于以上框架搭建的阅读APP，阅读内容主要面向程序员 &amp; 极客，目前包括：</p>
 <ul>
@@ -87,6 +87,9 @@
 <p>上面两个方法都可以借助RxJava的<code>compose</code>操作符直接调用，<code>compose</code>操作符的作用就是允许我们在<code>Transformer</code>对象中封装一系列的操作，从而在不打破链式调用的前提下封装一些重复性的操作<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//封装错误的统一处理</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">CommonSubscriber</span>&lt;<span class="title">T</span>&gt; <span class="keyword">extends</span> <span class="title">Subscriber</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">    <span class="keyword">private</span> BaseView mView;</div><div class="line">    <span class="keyword">private</span> String mErrorMsg;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="title">CommonSubscriber</span><span class="params">(BaseView view)</span></span>&#123;</div><div class="line">        <span class="keyword">this</span>.mView = view;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="title">CommonSubscriber</span><span class="params">(BaseView view, String errorMsg)</span></span>&#123;</div><div class="line">        <span class="keyword">this</span>.mView = view;</div><div class="line">        <span class="keyword">this</span>.mErrorMsg = errorMsg;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mView == <span class="keyword">null</span>)</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">if</span> (mErrorMsg != <span class="keyword">null</span> &amp;&amp; !TextUtils.isEmpty(mErrorMsg)) &#123;</div><div class="line">            mView.showError(mErrorMsg);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> ApiException) &#123;</div><div class="line">            mView.showError(e.toString());</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> HttpException) &#123;</div><div class="line">            mView.showError(<span class="string">"数据加载失败ヽ(≧Д≦)ノ"</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            mView.showError(<span class="string">"未知错误ヽ(≧Д≦)ノ"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>RxJava的<code>Observer&lt;T&gt;</code>接口有三个方法，经过一系列的操作符处理后，最终数据会由<code>onNext</code>方法发出，所以为了应对大多数场景我们可以做一层封装，对发生错误的回调<code>onError</code>做统一处理，让上层专注于处理<code>onNext</code>中的逻辑<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Subscription rxSubscription = mRetrofitHelper.fetchGirlList(NUM_OF_PAGE,currentPage)</div><div class="line">                .compose(RxUtil.&lt;GankHttpResponse&lt;List&lt;GankItemBean&gt;&gt;&gt;rxSchedulerHelper())</div><div class="line">                .compose(RxUtil.&lt;List&lt;GankItemBean&gt;&gt;handleResult())</div><div class="line">                .subscribe(<span class="keyword">new</span> CommonSubscriber&lt;List&lt;GankItemBean&gt;&gt;(mView) &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(List&lt;GankItemBean&gt; gankItemBeen)</span> </span>&#123;</div><div class="line">                        mView.showContent(gankItemBeen);</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">        addSubscrebe(rxSubscription);</div></pre></td></tr></table></figure></p>
 <p>在<code>CommonSubscriber</code>中传入View层对象，发生错误后将错误信息直接传递到View层做展示</p>
+<p>最后再总结下Retrofit，OkHttp，RxJava在一次网络请求中各自的职责，在GeekNews中的写法大致可以用一张图来描述：  </p>
+<p><img src="http://odck16ake.bkt.clouddn.com/android_geeknews_1.png" alt=""></p>
+<p><code>Retrofit</code>作为上层网络框架，<code>OkHttp</code>作为底层网络框架，<code>RxJava</code>处理数据流，完美配合~<br>并且这三者都具有非常强大的扩展性，你可以针对具体的项目或业务，为Retrofit.Builder添加各种自定义的<code>Factory</code>，为OkHttp.Buidler添加各种<code>Interceptor</code>，为RxJava封装多种操作符，玩出各种花样</p>
 <h1 id="Dagger2"><a href="#Dagger2" class="headerlink" title="Dagger2"></a>Dagger2</h1><p><code>Dagger2</code>的学习曲线应该是这几者中最高的，其中一部分原因是因为很多人可能学习了一段时间后甚至都没弄明白<code>Dagger2</code>究竟是用来做什么的，我始终认为在学习一个框架前第一件事情就是要认清这个框架可以为我们带来什么好处，在弄明白这个问题之后，不仅有助于你去理解整个框架的设计思路，也能方便你找出最合适的使用场景从而灵活运用。如果你已经学过了<code>Dagger2</code>中那些注解的基本含义，但是还是不知道该从何下手，或不明白<code>Dagger2</code>能做到哪些事，希望下面的内容可以帮你解惑</p>
 <p><code>Dagger2</code>是一款帮助我们完成<code>依赖注入</code>的框架，从而做到降低耦合，解除依赖关系，可复用，易测试等等，下面举个栗子来说明：</p>
 <p>参考Google的<a href="https://google.github.io/dagger/users-guide" target="_blank" rel="external">DaggerGuide</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CofferMaker</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Heater heater;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Pump pump;</div><div class="line"></div><div class="line">	CofferMaker() &#123;</div><div class="line">	<span class="keyword">this</span>.heater = <span class="keyword">new</span> ElectricHeater();</div><div class="line">	<span class="keyword">this</span>.pump = <span class="keyword">new</span> Thermosiphon(heater);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -99,9 +102,10 @@
 <li><code>Retrofit</code>依赖于<code>Retrofit.Builder</code>和<code>OkHttpClient</code></li>
 <li><code>OkHttpClient</code>依赖于<code>OkHttpClient.Builder</code></li>
 </ul>
+<p>但是我并不用关注这些依赖关系，我只需要把依赖列在参数中即可，<code>Dagger2</code>会自动帮我找到提供依赖的provide或inject，生成依赖关系的代码，代替了手动传参（手动注入依赖）</p>
 <p>假如不使用<code>Dagger2</code>时，我们需要面临的问题：</p>
 <ul>
-<li>小心翼翼依赖的先后顺序，被依赖对象要在依赖者之前创建</li>
+<li>要时刻关注依赖的先后顺序，被依赖对象要在依赖者之前创建</li>
 <li>某个被依赖者发现变化，若没有以注入的方式依赖，会牵连一部分依赖者</li>
 <li>错综复杂的函数调用与参数传递</li>
 </ul>
@@ -110,7 +114,8 @@
 <li>无需关心先后顺序或依赖关系，由<code>Dagger2</code>帮你找到参数中需要依赖的对象的Provider或构造函数，进而确定依赖关系</li>
 <li>某个被依赖者发生变化只需要修改其对应的Provider或构造函数即可，不用修改依赖者，如果变化后产生了同种类型的依赖使用<code>Qualifier</code>注解加以区分即可</li>
 <li>依赖被统一到了<code>Module</code>中，由<code>Inject</code>标注构造函数或<code>Provide</code>提供，非常清晰直观</li>
-<li>最后你可能会达到这种境界：啥？需求变了又多了个依赖？构造函数里加上这个依赖，相应的再加个provide或标注个inject收工~ 至于谁先谁后，哪些依赖我，我又依赖哪些和我有什么关系？</li>
+<li>每个provide相对独立，可以替换具体实现做单元测试</li>
+<li>最后你可能会达到这种境界：蛤？需求变更又多了个依赖？在构造函数里加上这个依赖，相应的再加个provide或标注个inject~ 收工~ 至于新加的依赖和其他依赖谁先谁后，哪些依赖我，我又依赖哪些和我有什么关系？</li>
 </ul>
 <p>最后提一下<code>Scope</code>注解的一些常见误解：</p>
 <ul>
@@ -120,12 +125,13 @@
 <p>结合这些总结和上面<code>Module</code>注解中的代码不知道你有没有些许感悟呢(=￣ω￣=)</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>GeekNews只是一个小项目，而且仍有很多不完善的地方，还无法把MVP，RxJava，Dagger等的优势充分展现，尤其是MVP和Dagger，在入门级项目中甚至会徒增代码量，还有类与接口的数量，但是在越大型的项目上越能发挥它们解耦，解除依赖的优势。这就需要我们充分理解这些框架或架构思路诞生之初的目的和内部的实现原理，不是为了用而用，或依照模板机械的使用，而是可以根据场景在最需要的地方用出效果，并加以合理的封装与改造让它更适合我们的项目，最终帮助我们构建出更好的应用(&lt;ゝω·)</p>
 <p>上面很多内容都是自己的理解，如果有错误或不足之处也欢迎指出，互相学习~</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://blog.zhaiyifan.cn/2016/03/27/android-new-project-from-0-p4/" target="_blank" rel="external">从零开始的Android新项目4 - Dagger2篇</a><br><a href="https://yuanjunli.github.io/2016/11/26/rxjava+retrofit+OkHttp%E5%B0%81%E8%A3%85/" target="_blank" rel="external">RxJava+Retrofit+OkHttp封装</a>  </p>
 <blockquote><p>声明：本站所有文章均为原创或翻译，遵循<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>，如需转载请确保您对该协议有足够了解，并附上作者名(Est)及原贴地址</p>
 </blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;貌似这是一篇迟到了几个月的文章？总结一下搭建GeekNews时的心得&lt;/p&gt;
+      &lt;p&gt;貌似这是一篇迟到了几个月的文章？总结一下搭建GeekNews时关于MVP，RxJava，Retrofit，Dagger2的一些心得&lt;/p&gt;
 &lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
     
     </summary>
@@ -519,7 +525,7 @@
     <link href="blog.codeest.moe/2017/01/01/life-2016/"/>
     <id>blog.codeest.moe/2017/01/01/life-2016/</id>
     <published>2017-01-01T15:32:08.000Z</published>
-    <updated>2017-02-17T15:53:19.000Z</updated>
+    <updated>2017-02-28T17:01:55.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt --></p>
 <p>关于2016年，细想一下还是有不少东西值得记录的，总体来说算是比较充实的一年，就按照学习和生活两方面说吧。</p>
@@ -562,9 +568,9 @@
 <li>进一步学习JavaScript和前端</li>
 </ul>
 <h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>生活上依然过着很宅的日子，每天看一集动漫就可以满足的那种(￣ˇ￣)</p>
-<h3 id="二次元-amp-ACG"><a href="#二次元-amp-ACG" class="headerlink" title="二次元 &amp; ACG"></a>二次元 &amp; ACG</h3><p>和小伙伴们去逛了一些展，3场Comicup，1场ChinaJoy，1场Bilibili Macro Link，都很热闹，买到一些小宅物也很开心  </p>
+<p>和小伙伴们去逛了一些展，3场Comicup，1场ChinaJoy，1场Bilibili Macro Link，都很热闹，买到一些小宅物也很开心  </p>
 <p>游戏方面基本在玩手游和音游，端游、moba都已经没什么兴趣了，上半年主要在玩百万氪金王，后来立绘被焚化局通告和谐了，实在不能忍，把这个玩了一年的游戏给弃了，也不用氪金了╮(╯▽╰)╭。国庆玩了一周阴阳师，刚开始觉得挺好玩的，很有特色的一款游戏，后来觉得太肝，后期重复性略大，也弃之。下半年偶尔和小伙伴们一起玩玩守望先锋，不错的游戏，暴雪出品，必属精品。</p>
-<h3 id="三次元"><a href="#三次元" class="headerlink" title="三次元"></a>三次元</h3><p>16年没怎么出门，只去了杭州、厦门，还有上海周边的一些小地方，周末看看电影看看书追追番，很喜欢《君名》，刷了两遍。17年如果有机会的话，国内想去成都/重庆旅游，国外想去日本旅游，不知道有没有机会实现心愿呢</p>
+<p>16年没怎么出门，只去了杭州、厦门，还有上海周边的一些小地方，周末看看电影看看书追追番，很喜欢《君名》，刷了两遍。17年如果有机会的话，国内想去成都/重庆旅游，国外想去日本旅游，不知道有没有机会实现心愿呢</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>最后共勉两句话：</p>
 <ul>
 <li>一句是Android大神郭霖说过的：<b>每当你在感叹，如果有这样一个东西就好了的时候，请注意，其实这是你的机会</b></li>
