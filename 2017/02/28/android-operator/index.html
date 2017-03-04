@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Est的小窝">
+    <title>操作符速查索引 - Est的小窝</title>
+    <meta name="author" content="Est">
+    
+    
+        <link rel="icon" href="assets/images/ico.png">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="RxJava操作符，Java8 Stream API，Kotlin高阶函数，已经记不完了…（摔！列个大纲方便cmd/ctrl + F">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="操作符速查索引">
+<meta property="og:url" content="blog.codeest.moe/2017/02/28/android-operator/index.html">
+<meta property="og:site_name" content="Est的小窝">
+<meta property="og:description" content="RxJava操作符，Java8 Stream API，Kotlin高阶函数，已经记不完了…（摔！列个大纲方便cmd/ctrl + F">
+<meta property="og:updated_time" content="2017-03-04T17:59:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作符速查索引">
+<meta name="twitter:description" content="RxJava操作符，Java8 Stream API，Kotlin高阶函数，已经记不完了…（摔！列个大纲方便cmd/ctrl + F">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="blog.codeest.moe/assets/images/my_avatar.png"/>
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail12.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/tn/thumbnail12.png" />
+    
+    
+        <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://odck16ake.bkt.clouddn.com/cover_img_1.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-oqbr8sgs75eiwt16lluzosdkjrmrmntmecihpvf7jgujcfow37t114vsy29r.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Est的小窝</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/my_avatar.png"/>
+            </a>
+            <span class="sidebar-profile-name">Estの小窝</span>
+            <span class="sidebar-profile-motto">Coder & ACGer</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-circle-thin"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-star-o"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-terminal"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/codeestX" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:codeest.dev@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">Mail</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://codeestX.github.io/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-mars"></i>
+                    <span class="sidebar-button-desc">Friends</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="http://lab.codeest.moe" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-flask"></i>
+                    <span class="sidebar-button-desc">Lab</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/donate"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-dollar"></i>
+                    <span class="sidebar-button-desc">Donate</span>
+                </a>
+            </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="http://blog.codeest.moe/bangumi"
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-power-off"></i>
+                    <span class="sidebar-button-desc">Bangumi</span>
+                </a>
+            </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('http://odck16ake.bkt.clouddn.com/cover_img_1.jpg');"
+             data-behavior="3">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            操作符速查索引
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Tue Feb 28 2017 23:52:20 GMT+0800">
+	
+		    Feb 28, 2017
+    	
+    </time>
+    
+        <span>IN </span>
+        
+    <a class="category-link" href="/categories/Android/">Android</a>
+
+
+    
+</div>
+
+    <h1 class="post-meta">
+    <br>
+            <span id="busuanzi_container_page_pv">View <span id="busuanzi_value_page_pv"></span> times.</span>
+    </h1>
+</div>
+
+            
+        </div>
+
+            <div id="main" data-behavior="3"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>为了方便自己查询，也为了重温一些常用的操作符，在这里列个索引，包括RxJava操作符，Java8 Stream API，Kotlin高阶函数，总体看来三者在设计上有很多相似之处<br>因为仅仅是索引，为了简洁直观、方便查询不会去具体分析每个操作符的用法，如果想了解具体用法可以去看文末的参考文章</p>
+<h1 id="RxJava篇"><a href="#RxJava篇" class="headerlink" title="RxJava篇"></a>RxJava篇</h1><h3 id="0-创建型操作符"><a href="#0-创建型操作符" class="headerlink" title="0.创建型操作符"></a>0.创建型操作符</h3><ul>
+<li><p>create(onSubscribe)<br>通过<code>OnSubscribe</code>对象创建<code>Observable</code></p>
+</li>
+<li><p>just(T)<br>依次发射传入的参数</p>
+</li>
+<li><p>from(Array/Iterator)<br>拆解数组/容器中的元素并依次发射</p>
+</li>
+<li><p>defer(Func0)<br>配合创建操作符，做到订阅后才会开始创建</p>
+</li>
+<li><p>repeat(int)<br>配合创建操作符，重复数次创建发射的数据</p>
+</li>
+<li><p>range(int, int)<br>依次发射一个数字区间的数字</p>
+</li>
+<li><p>interval(int, int, Unit)<br>轮询发射，参数依次为起始延迟时间，轮询时间间隔，时间单位</p>
+</li>
+<li><p>timer(int, Unit)<br>延迟发射，参数为延迟时间，时间单位</p>
+</li>
+</ul>
+<h3 id="1-转换操作符"><a href="#1-转换操作符" class="headerlink" title="1.转换操作符"></a>1.转换操作符</h3><ul>
+<li><p>map(Func1)<br>类型转化A -&gt; B</p>
+</li>
+<li><p>flapMap(Func1)<br>类型转化，返回<code>Observable&lt;T&gt;</code>，A -&gt; Observable<b></b></p>
+</li>
+<li><p>concatMap(Func1)<br>flapMap返回的结果是不能保证和传入顺序一致的，可能会交叉，concapMap则是依序的</p>
+</li>
+<li><p>flatMapIterable(Func1)<br>与flapMap类似，要求返回<code>Iterable&lt;T&gt;</code>，并将该集合依次发射</p>
+</li>
+<li><p>switchMap(Func1)<br>与flapMap类似，当数据源发出新数据时，会停止发射上一个数据源转化产生的Observable，开始处理当前需要转化的数据</p>
+</li>
+<li><p>scan(Func2)<br>类型转化，将当前两个数据源A与B转化后的结果作为下一次转化的A数据，与新数据B继续转化</p>
+</li>
+<li><p>groupBy(Func1)<br>基于一个Key，将数据源中Key相同的数据划分到同一组，产生多个组，并将每组的数据依次发射</p>
+</li>
+<li><p>buffer(int)<br>收集结果，每集齐n个发射一次集合</p>
+</li>
+<li><p>buffer(int, Unit)<br>收集结果，每集齐一段时间发射一次集合</p>
+</li>
+<li><p>window(int, Unit)<br>同Buffer类似，但返回的是<code>Observable</code>包裹的集合</p>
+</li>
+<li><p>cast(Class)<br>将每个数据都强转成该class类型再发射</p>
+</li>
+</ul>
+<h3 id="2-过滤操作符"><a href="#2-过滤操作符" class="headerlink" title="2.过滤操作符"></a>2.过滤操作符</h3><ul>
+<li><p>filter(Func1)<br>过滤表达式结果为false的数据</p>
+</li>
+<li><p>take(int)<br>发射前n项</p>
+</li>
+<li><p>takeLast(int)<br>发射后n项</p>
+</li>
+<li><p>takeUntil(Func1)<br>发射，直到表达式结果为true停止发射</p>
+</li>
+<li><p>takeUntil(Observable)<br>发射，直到参数中的<code>Observable</code>开始发射时停止发射</p>
+</li>
+<li><p>skip(int)<br>跳过前n项</p>
+</li>
+<li><p>skipLast(int)<br>跳过后n项</p>
+</li>
+<li><p>elementAt(int)<br>发射第n项</p>
+</li>
+<li><p>debounce(long, Unit)<br>如果在指定的时间间隔中没有发射一个数据，那么它将发射最后的那个（即一个数据在下一个数据到来前停留了足够的间隔才会发射，常用于点击间隔，搜索间隔等）</p>
+</li>
+<li><p>sample(long, Unit)<br>发射每个时间间隔中最近的一个元素</p>
+</li>
+<li><p>throttleFirst(long, Unit)<br>发射每个时间间隔中第一个元素</p>
+</li>
+<li><p>timeout(long, Unit)<br>指定时间间隔没发射值则产生onError</p>
+</li>
+<li><p>distinct()<br>过滤重复的数据</p>
+</li>
+<li><p>distinctUntilChanged()<br>只判断和前一项是否重复，重复则过滤</p>
+</li>
+<li><p>first()<br>只发射第一项</p>
+</li>
+<li><p>first(Func1）<br>发射第一个满足条件的项</p>
+</li>
+<li><p>last()<br>只发射最后一项</p>
+</li>
+<li><p>last(Func1)<br>只发射最后一个满足条件的项</p>
+</li>
+</ul>
+<h3 id="3-组合操作符"><a href="#3-组合操作符" class="headerlink" title="3.组合操作符"></a>3.组合操作符</h3><ul>
+<li><p>merge(Observable, Observable)<br>合并两个<code>Observable</code>中的数据并依次发射，合并后是无序的</p>
+</li>
+<li><p>merge(Observable[])<br>同上</p>
+</li>
+<li><p>concat(Observable&lt;? extends T&gt;, Observable&lt;? extends T&gt;)<br>先发射前者的数据，再发射后者的数据，相比merge有序了</p>
+</li>
+<li><p>startWith(T)<br>在源数据前插入一组数据</p>
+</li>
+<li><p>startWith(Observable<t>)<br>同上，发射时先发射参数Observable中的数据，即也是插入数据到前面</t></p>
+</li>
+<li><p>zip(Observable, Observable, Func2)<br>合并两个<code>Observable</code>中的数据，每次从两者中各取一个数据根据Func2规则做转化后发射，其中一个Observable发射结束或出现异常则结束</p>
+</li>
+<li><p>combineLatest(Observable, Observable, Func2)<br>合并两个<code>Observable</code>中的数据，在每一个新数据发射时都取另一个Observable中最近一次发射数据根据Func2规则做转化后发射</p>
+</li>
+<li><p>join(Observable, Func1, Func1, Func2)<br>类似zip和combineLatest，将源数据与参数中的<code>Observable</code>结合后根据Func2作转换后发射，不过第一个Func1决定了源数据的声明有效期，第二个Func1则决定了参数<code>Observable</code>数据的声明有效期，每个新数据发射后都会与另一个<code>Observable</code>中尚在声明有效期内的所有数据都产生结合</p>
+</li>
+</ul>
+<h3 id="附录-Scheduler种类"><a href="#附录-Scheduler种类" class="headerlink" title="附录 Scheduler种类"></a>附录 Scheduler种类</h3><table>
+<thead>
+<tr>
+<th>种类</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schedulers.computation()</td>
+<td>用于计算任务，如事件循环或和回调处理，不要用于IO操作(IO操作请使用Schedulers.io())；默认线程数等于处理器的数量，它是buffer() , debounce() , delay() , interval() , sample() , skip()方法默认的调度器</td>
+</tr>
+<tr>
+<td>Schedulers.from(executor)</td>
+<td>使用指定的Executor作为调度器</td>
+</tr>
+<tr>
+<td>Schedulers.immediate()</td>
+<td>在当前线程立即开始执行任务，它是 timeout() , timeInterval() ,以及 timestamp() 方法默认的调度器</td>
+</tr>
+<tr>
+<td>Schedulers.io()</td>
+<td>用于IO密集型任务，如异步阻塞IO操作，这个调度器的线程池会根据需要增长；对于普通的计算任务，请使用Schedulers.computation()；Schedulers.io()默认是一个CachedThreadScheduler，很像一个有线程缓存的新线程调度器</td>
+</tr>
+<tr>
+<td>Schedulers.newThread()</td>
+<td>为每个任务创建一个新线程</td>
+</tr>
+<tr>
+<td>Schedulers.trampoline()</td>
+<td>当其它排队的任务完成后，在当前线程排队开始执行，它是 repeat() 和 retry() 方法默认的调度器</td>
+</tr>
+<tr>
+<td>AndroidSchedulers.mainThread()</td>
+<td>RxAndroid中的类型，表示Android主线程</td>
+</tr>
+</tbody>
+</table>
+<h3 id="附录-Subject种类"><a href="#附录-Subject种类" class="headerlink" title="附录 Subject种类"></a>附录 Subject种类</h3><table>
+<thead>
+<tr>
+<th>种类</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PublishSubject</td>
+<td>常规情况，在订阅后开始发送数据</td>
+</tr>
+<tr>
+<td>BehaviorSubject</td>
+<td>在订阅者订阅时，会先发送一个其最近发送的数据（如果此时还没有收到任何数据，它会发送一个默认值），然后正常发送订阅后的数据</td>
+</tr>
+<tr>
+<td>ReplaySubject</td>
+<td>在订阅时，会发送所有的数据给订阅者，即使是订阅前已经发射的数据</td>
+</tr>
+<tr>
+<td>AsyncSubject</td>
+<td>只会在Observable发射完结后，将发出的最后一个数据发给订阅者</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Java8-stream-API篇"><a href="#Java8-stream-API篇" class="headerlink" title="Java8 stream API篇"></a>Java8 stream API篇</h1><h3 id="create型"><a href="#create型" class="headerlink" title="create型"></a>create型</h3><p>Stream的一系列静态工厂方法</p>
+<ul>
+<li>of(T t)</li>
+<li><p>of(T… values)<br>返回含有一个或多个T元素的stream</p>
+</li>
+<li><p>generate(Supplier<t> s)<br>返回一个无限长度的stream，通常要配合过滤或终结操作符使之变为有限长度的</t></p>
+</li>
+<li><p>iterate(T seed, UnaryOperator<t> f)<br>返回seed，f(seed)，f(f(seed)) … 类型的无限长度的stream</t></p>
+</li>
+<li><p>empty()<br>返回空的stream</p>
+</li>
+</ul>
+<h3 id="Intermediate型"><a href="#Intermediate型" class="headerlink" title="Intermediate型"></a>Intermediate型</h3><p>Intermediate型的方法返回结果为stream类型，可以像链式一样多次调用</p>
+<ul>
+<li><p>concat(Stream, Stream)<br>按先后有序拼接两个stream中的数据</p>
+</li>
+<li><p>distinct()<br>剔除重复元素</p>
+</li>
+<li><p>filter(Predicate)<br>过滤不满足条件的元素</p>
+</li>
+<li><p>map(Func)<br>转换元素</p>
+</li>
+<li><p>flatMap(Func)<br>转换元素，要求返回一个stream类型</p>
+</li>
+<li><p>peek(Consumer）<br>创建一个包含原Stream的所有元素的新Stream，对其中的每个元素执行一次Consumer处理，原流不变，直接返回</p>
+</li>
+<li><p>skip(long)<br>跳过前n个元素，从n+1起返回一个新流</p>
+</li>
+<li><p>sorted()</p>
+</li>
+<li>sorted(Comparator)<br>按规则对流排序</li>
+</ul>
+<h3 id="Terminal型"><a href="#Terminal型" class="headerlink" title="Terminal型"></a>Terminal型</h3><p>Terminal型的方法返回结果为void或非stream类型，在数据流中只能使用一次</p>
+<ul>
+<li><p>count()<br>返回流中元素的个数</p>
+</li>
+<li><p>forEach(Consumer)<br>遍历元素，对每个元素执行一次Consumer处理</p>
+</li>
+<li><p>forEachOrdered(Consumer)<br>保证依照原顺序遍历元素，对每个元素执行一次Consumer处理，并行流中forEach可能会乱序</p>
+</li>
+<li><p>max(Comparator)<br>返回最大值</p>
+</li>
+<li><p>min(Comparator)<br>返回最小值</p>
+</li>
+<li><p>reduce(BinaryOperator)</p>
+</li>
+<li>reduce(T, BinaryOperator)</li>
+<li><p>reduce(U, BiFunction, BinaryOperator)<br>有三个重载方法，类似RxJava中的scan，将两个元素的操作结果作为下一次操作的元素之一，与新元素再次操作，返回最终结果 <a href="http://blog.csdn.net/IO_Field/article/details/54971679" target="_blank" rel="external">具体参考</a></p>
+</li>
+<li><p>collect(Supplier, BiConsumer, BiConsumer)</p>
+</li>
+<li>collect(Collector)<br>有两个重载方法，非常强大的操作符，可以将流转化成各种数据结构类型返回 <a href="http://blog.csdn.net/io_field/article/details/54971608" target="_blank" rel="external">具体参考</a></li>
+</ul>
+<h3 id="Short-circuiting型"><a href="#Short-circuiting型" class="headerlink" title="Short-circuiting型"></a>Short-circuiting型</h3><p>Short-circuiting型的方法可以有效的处理无限元素的stream</p>
+<ul>
+<li><p>limit(long)<br>返回前n个元素组成的新流</p>
+</li>
+<li><p>allMatch()<br>顾名思义，所有元素满足条件才会返回true，否则返回false</p>
+</li>
+<li><p>anyMatch()<br>有元素满足条件就会返回true，否则返回false</p>
+</li>
+<li><p>noneMatch()<br>所有元素都不满足条件则返回true，否则返回false</p>
+</li>
+<li><p>findAny()<br>返回随机一个元素的<code>Optional</code></p>
+</li>
+<li><p>findFirst()<br>返回第一个元素的<code>Optional</code></p>
+</li>
+</ul>
+<h1 id="Kotlin高阶函数篇"><a href="#Kotlin高阶函数篇" class="headerlink" title="Kotlin高阶函数篇"></a>Kotlin高阶函数篇</h1><h3 id="0-集合操作符"><a href="#0-集合操作符" class="headerlink" title="0.集合操作符"></a>0.集合操作符</h3><p>非常非常丰富，和上面的<code>rxjava</code>, <code>stream</code>操作符有很多类似之处，一共有6类：</p>
+<ul>
+<li>总数操作符</li>
+<li>过滤操作符</li>
+<li>映射操作符</li>
+<li>顺序操作符</li>
+<li>生产操作符</li>
+<li>元素操作符</li>
+</ul>
+<p>已经有文章例举的很全面了，<a href="http://blog.csdn.net/coder_pig/article/details/53164424" target="_blank" rel="external">具体参考戳这里</a></p>
+<h3 id="1-apply-with"><a href="#1-apply-with" class="headerlink" title="1.apply/with"></a>1.apply/with</h3><p>通过上下文帮助我们调用方法，而且由于上下文是依赖注入的，还可以灵活切换<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">textView.apply &#123;</div><div class="line">	scale = <span class="number">2</span>f </div><div class="line">   rotationX = <span class="number">10</span>f</div><div class="line">&#125;</div><div class="line"><span class="comment">//等同于</span></div><div class="line">with(textView) &#123;</div><div class="line">	scale = <span class="number">2</span>f </div><div class="line">   rotationX = <span class="number">10</span>f</div><div class="line">&#125;</div><div class="line"><span class="comment">//等同于</span></div><div class="line">textView.scale = <span class="number">2</span>f</div><div class="line">textView.rotationX = <span class="number">10</span>f</div></pre></td></tr></table></figure></p>
+<h3 id="2-let"><a href="#2-let" class="headerlink" title="2.let"></a>2.let</h3><p>let中传入的lambda调用的参数就是它自己，是一个灵活的操作符，可以封装一些操作，可以有返回值<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">textView?.let&#123; </div><div class="line">    it.scale = <span class="number">2</span>f</div><div class="line">    it.rotationX = <span class="number">10</span>f</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="3-run"><a href="#3-run" class="headerlink" title="3.run"></a>3.run</h3><p>执行一个代码块，类似于执行了一个匿名函数，可以有返回值<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">run &#123; &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="4-repeat"><a href="#4-repeat" class="headerlink" title="4.repeat"></a>4.repeat</h3><p>将代码块重复执行数次，lambda传入的参数（it）是索引<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">repeat(<span class="number">3</span>) &#123;</div><div class="line">	print(<span class="string">"index:<span class="subst">$it</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="5-to"><a href="#5-to" class="headerlink" title="5.to"></a>5.to</h3><p>产生Pair类型的对象<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> map = mapOf(<span class="number">1</span> to <span class="string">"x"</span>, <span class="number">2</span> to <span class="string">"y"</span>, <span class="number">-1</span> to <span class="string">"zz"</span>)</div><div class="line">println(map) <span class="comment">// &#123;1=x, 2=y, -1=zz&#125;</span></div></pre></td></tr></table></figure></p>
+<h3 id="6-lazy"><a href="#6-lazy" class="headerlink" title="6.lazy"></a>6.lazy</h3><p>起到延迟加载的效果，在第一次调用时才加载<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestActivity</span> : <span class="type">Activity</span></span>()&#123;</div><div class="line"></div><div class="line">        <span class="keyword">val</span> mTextView: TextView <span class="keyword">by</span> lazy&#123;</div><div class="line">        	findViewById(R.id.tv_test) <span class="keyword">as</span> TextView</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span>&#123;</div><div class="line">        	<span class="keyword">super</span>.onCreate(savedInstanceState)</div><div class="line">        	setContentView(R.layout.activity_main)</div><div class="line">        	mTextView = <span class="string">"Test"</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>更多高阶函数可以<a href="http://kotlinlang.org/api/latest/jvm/stdlib/kotlin/index.html#functions" target="_blank" rel="external">参考官网</a></p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://zhuanlan.zhihu.com/p/20687307" target="_blank" rel="external">RxJava系列2(基本概念及使用介绍)</a><br><a href="http://blog.csdn.net/io_field/article/details/54971761" target="_blank" rel="external">Java 8系列之Stream的基本语法详解</a><br><a href="http://www.jianshu.com/p/03db2203e0f2" target="_blank" rel="external">Kotlin一些高阶函数的使用</a></p>
+<blockquote><p>声明：本站所有文章均为原创或翻译，遵循<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>，如需转载请确保您对该协议有足够了解，并附上作者名(Est)及原贴地址</p>
+</blockquote>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/android/">android</a> <a class="tag tag--primary tag--small t-link" href="/tags/java8/">java8</a> <a class="tag tag--primary tag--small t-link" href="/tags/kotlin/">kotlin</a> <a class="tag tag--primary tag--small t-link" href="/tags/operator/">operator</a> <a class="tag tag--primary tag--small t-link" href="/tags/rxjava/">rxjava</a> <a class="tag tag--primary tag--small t-link" href="/tags/stream/">stream</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/26/android-geeknews/" data-tooltip="聊聊GeekNews架构：MVP + RRD">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">给作者投食戳这里OwO</a>
+        <br>
+    </div>
+    <div id="donate_guide" class="donate_bar center hidden" >
+        <!-- 支付宝打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏">
+        <!-- 微信打赏图案 -->
+        <img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/28/android-operator/"
+     data-title="操作符速查索引" data-url="blog.codeest.moe/2017/02/28/android-operator/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <div id="footer-img"></div>
+    <span class="copyrights">
+        <p>
+            Powered by <a href="https://hexo.io/zh-cn/">Hexo</a>.
+            Theme - <a href="https://github.com/kaedea/hexo-theme-themia">Themia</a>.<br>
+            <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors.</span>
+            <span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span> times.</span>
+            <span id="times"></span><br>
+            License - <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">Attribution-NonCommercial-NoDerivatives 4.0 International</a>.
+        </p>
+        Copyrights &copy; 2017 Est. All Rights Reserved.٩(ˊᗜˋ*)و
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/26/android-geeknews/" data-tooltip="聊聊GeekNews架构：MVP + RRD">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=blog.codeest.moe/2017/02/28/android-operator/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/my_avatar.png"/>
+        
+            <h4 id="about-card-name">Est</h4>
+        
+            <h5 id="about-card-bio"><p>Coder &amp; ACGer<br/><div><a href='http://me.codeest.moe'>http://me.codeest.moe</a> for more details about me</div> <div><a href='http://lab.codeest.moe'>http://lab.codeest.moe</a> my open source projects</div> <div>Contact me on Telegram <a href='https://t.me/codeest'>@codeest</a></div></p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android Develper</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                上海
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/my_cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/scrip-j0uowakwyqm7tad9s8abvhkgzvgxh5xs7rljgrtvjeqpv8lucqfjvqbyxltq.min.js"></script>
+<!--SCRIPTS END-->
+<!--BUSUANZI-->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+<!--BUSUANZI END-->
+<!--PANGU AUTO SPACE-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.min.js"></script>
+<script> pangu.spacingPage(); </script>
+<!--PANGU AUTO SPACE END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'codeest'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+                ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
+                ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <script type="text/javascript">
+            if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+            else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+            function hookDUOSHUO_tp(){
+                var _D_post=DUOSHUO.templates.post
+                DUOSHUO.templates.post=function (e,t){
+                    var rs=_D_post(e,t);
+                    if(e.post.agent&&/^Mozilla/.test(e.post.agent))
+                        rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
+                    return rs;
+                }
+            }
+            function show_ua(string){
+                $.ua.set(string);
+                var sua=$.ua;
+                if(sua.os.version=='x86_64')sua.os.version='x64';
+                return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>'+'<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>';
+            }
+        </script>
+    
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','6bBsWF6XxSDWL2ZZ-1KD','2.0.0');
+    </script>
+
+    <script language=javascript>
+        function show_date_time()
+        {
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay = new Date("9/11/2016 0:00:00");today=new Date();timeold=(today.getTime() - BirthDay.getTime());sectimeold=timeold/1000;secondsold=Math.floor(sectimeold);msPerDay=24*60*60*1000;e_daysold=timeold/msPerDay;daysold=Math.floor(e_daysold); e_hrsold=(e_daysold-daysold)*24;hrsold=Math.floor(e_hrsold); e_minsold=(e_hrsold-hrsold)*60; minsold=Math.floor((e_hrsold-hrsold)*60); seconds=Math.floor((e_minsold-minsold)*60);
+            times.innerHTML="<span>Blog age:"+daysold+ " day " +hrsold+" h "+minsold+" m "+seconds+" s."+"</span>";
+        }
+        show_date_time();
+    </script>
+
+</html>

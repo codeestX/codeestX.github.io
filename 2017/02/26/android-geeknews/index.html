@@ -23,7 +23,7 @@
 <meta property="og:description" content="貌似这是一篇迟到了几个月的文章？总结一下搭建GeekNews时关于MVP，RxJava，Retrofit，Dagger2的一些心得">
 <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/android_geeknews_0.png">
 <meta property="og:image" content="http://odck16ake.bkt.clouddn.com/android_geeknews_1.png">
-<meta property="og:updated_time" content="2017-02-28T17:01:16.000Z">
+<meta property="og:updated_time" content="2017-03-04T17:49:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊GeekNews架构：MVP + RRD">
 <meta name="twitter:description" content="貌似这是一篇迟到了几个月的文章？总结一下搭建GeekNews时关于MVP，RxJava，Retrofit，Dagger2的一些心得">
@@ -374,8 +374,11 @@
 <li><code>Retrofit</code>依赖于<code>Retrofit.Builder</code>和<code>OkHttpClient</code></li>
 <li><code>OkHttpClient</code>依赖于<code>OkHttpClient.Builder</code></li>
 </ul>
-<p>但是我并不用关注这些依赖关系，我只需要把依赖列在参数中即可，<code>Dagger2</code>会自动帮我找到提供依赖的provide或inject，生成依赖关系的代码，代替了手动传参（手动注入依赖）</p>
-<p>假如不使用<code>Dagger2</code>时，我们需要面临的问题：</p>
+<p>但是我并不用关注这些依赖关系，我只需要把依赖列在参数中即可，<code>Dagger2</code>会自动帮我找到提供依赖的provide或inject，生成依赖关系的代码，代替了手动传参（手动注入依赖），参考<a href="http://android.jobbole.com/82705/" target="_blank" rel="external">这篇文章</a>，Dagger2寻找依赖的过程如下：</p>
+<blockquote>
+<p>步骤1：查找Module中是否存在创建该类的方法。<br>步骤2：若存在创建类方法，查看该方法是否存在参数<br>    步骤2.1：若存在参数，则按从<strong>步骤1</strong>开始依次初始化每个参数<br>    步骤2.2：若不存在参数，则直接初始化该类实例，一次依赖注入到此结束<br>步骤3：若不存在创建类方法，则查找Inject注解的构造函数，<br>           看构造函数是否存在参数<br>    步骤3.1：若存在参数，则从<strong>步骤1</strong>开始依次初始化每个参数<br>    步骤3.2：若不存在参数，则直接初始化该类实例，一次依赖注入到此结束</p>
+</blockquote>
+<p>现在可以做如下总结，假如不使用<code>Dagger2</code>时，我们需要面临的问题：</p>
 <ul>
 <li>要时刻关注依赖的先后顺序，被依赖对象要在依赖者之前创建</li>
 <li>某个被依赖者发现变化，若没有以注入的方式依赖，会牵连一部分依赖者</li>
@@ -383,16 +386,16 @@
 </ul>
 <p>使用<code>Dagger2</code>后：</p>
 <ul>
-<li>无需关心先后顺序或依赖关系，由<code>Dagger2</code>帮你找到参数中需要依赖的对象的Provider或构造函数，进而确定依赖关系</li>
-<li>某个被依赖者发生变化只需要修改其对应的Provider或构造函数即可，不用修改依赖者，如果变化后产生了同种类型的依赖使用<code>Qualifier</code>注解加以区分即可</li>
-<li>依赖被统一到了<code>Module</code>中，由<code>Inject</code>标注构造函数或<code>Provide</code>提供，非常清晰直观</li>
+<li>无需关心先后顺序或依赖关系，由<code>Dagger2</code>帮你找到参数中需要依赖的对象的Provider或构造函数，进而确定依赖关系，省力省心</li>
+<li>某个被依赖者发生变化只需要修改其对应的Provider或构造函数即可，不用修改依赖者，避免了直接使用<code>new</code>带来的耦合问题，如果变化后产生了同种类型的依赖使用<code>Qualifier</code>注解加以区分即可</li>
+<li>依赖被统一到了<code>Module</code>中，由<code>Inject</code>标注构造函数或<code>Provide</code>提供，非常清晰直观，方便管理</li>
 <li>每个provide相对独立，可以替换具体实现做单元测试</li>
 <li>最后你可能会达到这种境界：蛤？需求变更又多了个依赖？在构造函数里加上这个依赖，相应的再加个provide或标注个inject~ 收工~ 至于新加的依赖和其他依赖谁先谁后，哪些依赖我，我又依赖哪些和我有什么关系？</li>
 </ul>
 <p>最后提一下<code>Scope</code>注解的一些常见误解：</p>
 <ul>
-<li><code>Singleton</code>也是一个<code>Scope</code>注解，它本身并没有创造单例的能力，是由于它通常配合管理全局类实例的<code>Component</code>使用，而有了单例的效果</li>
-<li><code>Scope</code>最大的作用是限制，并不是定义一个<code>ActivityScope</code>就神奇的绑定了<code>Activity</code>的生命周期，不同层级的<code>Component</code>需要定义不同的<code>Scope</code>，从而规范作用域</li>
+<li><code>Singleton</code>也是一个<code>Scope</code>注解，它本身并没有创造单例的能力，是由于它通常配合管理全局类实例的<code>Component</code>使用，而有了单例的效果，所以<code>Scope</code>的具体效果与它依赖的<code>Component</code>相关</li>
+<li><code>Scope</code>最大的作用是限制，并不是定义一个<code>ActivityScope</code>就神奇的绑定了<code>Activity</code>的生命周期，不同层级的<code>Component</code>需要定义不同的<code>Scope</code>，从而规范作用域，也可以借助<code>Scope</code>实现局部单例</li>
 </ul>
 <p>结合这些总结和上面<code>Module</code>注解中的代码不知道你有没有些许感悟呢(=￣ω￣=)</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>GeekNews只是一个小项目，而且仍有很多不完善的地方，还无法把MVP，RxJava，Dagger等的优势充分展现，尤其是MVP和Dagger，在入门级项目中甚至会徒增代码量，还有类与接口的数量，但是在越大型的项目上越能发挥它们解耦，解除依赖的优势。这就需要我们充分理解这些框架或架构思路诞生之初的目的和内部的实现原理，不是为了用而用，或依照模板机械的使用，而是可以根据场景在最需要的地方用出效果，并加以合理的封装与改造让它更适合我们的项目，最终帮助我们构建出更好的应用(&lt;ゝω·)</p>
@@ -417,7 +420,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/28/android-operator/"  data-tooltip="操作符速查索引">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -526,7 +529,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/28/android-operator/"  data-tooltip="操作符速查索引">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
