@@ -292,9 +292,9 @@
     
       <category term="java8" scheme="blog.codeest.moe/tags/java8/"/>
     
-      <category term="operator" scheme="blog.codeest.moe/tags/operator/"/>
-    
       <category term="stream" scheme="blog.codeest.moe/tags/stream/"/>
+    
+      <category term="operator" scheme="blog.codeest.moe/tags/operator/"/>
     
   </entry>
   
@@ -811,7 +811,7 @@
     <link href="blog.codeest.moe/2017/01/01/life-2016/"/>
     <id>blog.codeest.moe/2017/01/01/life-2016/</id>
     <published>2017-01-01T15:32:08.000Z</published>
-    <updated>2017-02-28T17:01:55.000Z</updated>
+    <updated>2017-03-17T16:13:16.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt --></p>
 <p>关于2016年，细想一下还是有不少东西值得记录的，总体来说算是比较充实的一年，就按照学习和生活两方面说吧。</p>
@@ -819,6 +819,7 @@
 <h2 id="上半年"><a href="#上半年" class="headerlink" title="上半年"></a>上半年</h2><p>上半年规划用半年时间来巩固基础，而且是系统的、完整的巩固，毕竟无论怎样的开发工作，基础始终是重要的一环，它既是高级技术的根基也是日常开发提升效率的关键。这部分我是通过看书 + 看视频 + 看技术博客来学习的，下面再分别来说：</p>
 <h4 id="看书"><a href="#看书" class="headerlink" title="看书"></a>看书</h4><ul>
 <li>《Thinking in Java》，即Java编程思想，厚厚的一本，但没有冗余，每章节的内容都很有价值，算是一本介于Java基础与进阶之间的书，看到很多人说过这本书每次看完一遍的感受都不一样，17年打算再看一遍</li>
+<li>《Effective Java》，只有200多页的一本书，因为整本书都是Java方面的干货，这本书不是教如何写代码的，而是教如何写出更优雅的代码，很实用的一本Java进阶书</li>
 <li>《Android开发艺术探索》，CSDN博主任玉刚（主席）写的一本Android进阶书，知识点覆盖比较全面，附带部分源码，不错的一本书，抽时间准备再来一遍</li>
 <li>《Android群英转》，CSDN博主徐宜生（医生）写的一本Android进阶书，感觉比艺术探索稍简单一些，读完也是很有收获</li>
 <li>《Android源码设计模式解析与实战》，非常好的一本书，作者算是手把手教你实践设计模式了，而且还例举出了设计模式在Android源码中的应用，源码和设计模式一起学习了</li>
