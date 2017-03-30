@@ -360,7 +360,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/donate/"  data-tooltip="Est的小金库">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/"  data-tooltip="Hello, Blog">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -368,7 +368,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/donate/" data-tooltip="Est的小金库">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -399,7 +399,7 @@
         </li>
         
             <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
                     <i class="fa fa-comment-o"></i>
                 </a>
             </li>
@@ -417,28 +417,9 @@
 
         
             
-                <div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">给作者投食戳这里OwO</a>
-        <br>
-    </div>
-    <div id="donate_guide" class="donate_bar center hidden" >
-        <!-- 支付宝打赏图案 -->
-        <img src="http://odck16ake.bkt.clouddn.com/qr_alipay.png" alt="支付宝打赏">
-        <!-- 微信打赏图案 -->
-        <img src="http://odck16ake.bkt.clouddn.com/qr_wechat.png" alt="微信打赏">
-    </div>
-    <script type="text/javascript">
-        document.getElementById('btn_donate').onclick = function(){
-            $('#donate_board').addClass('hidden');
-            $('#donate_guide').removeClass('hidden');
-        }
-    </script>
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<div id="ds-thread" class="ds-thread" data-thread-key="2016/01/01/bangumi/"
-     data-title="Est的追番表" data-url="blog.codeest.moe/2016/01/01/bangumi/">
-</div>
-
             
         
     </div>
@@ -469,7 +450,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/donate/"  data-tooltip="Est的小金库">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/post0/"  data-tooltip="Hello, Blog">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -477,7 +458,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/01/donate/" data-tooltip="Est的小金库">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -508,7 +489,7 @@
         </li>
         
             <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
                     <i class="fa fa-comment-o"></i>
                 </a>
             </li>
@@ -600,40 +581,21 @@
 <!--PANGU AUTO SPACE END-->
 
     
-        <script type="text/javascript">
-            var duoshuoQuery = {short_name:'codeest'};
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'blog.codeest.moe/2016/01/01/bangumi/';
+                 
+                    this.page.identifier = '2016/01/01/bangumi/';
+                 
+             };
             (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0]
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
-                ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
-                ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'codeest-moe';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
             })();
-        </script>
-        <script type="text/javascript">
-            if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
-            else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
-            function hookDUOSHUO_tp(){
-                var _D_post=DUOSHUO.templates.post
-                DUOSHUO.templates.post=function (e,t){
-                    var rs=_D_post(e,t);
-                    if(e.post.agent&&/^Mozilla/.test(e.post.agent))
-                        rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
-                    return rs;
-                }
-            }
-            function show_ua(string){
-                $.ua.set(string);
-                var sua=$.ua;
-                if(sua.os.version=='x86_64')sua.os.version='x64';
-                return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>'+'<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>';
-            }
         </script>
     
 

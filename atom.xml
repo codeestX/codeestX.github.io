@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.codeest.moe/"/>
-  <updated>2017-03-04T17:59:35.000Z</updated>
+  <updated>2017-03-30T18:10:05.000Z</updated>
   <id>blog.codeest.moe/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>画个技能树</title>
+    <link href="blog.codeest.moe/2017/03/29/life-skill-tree/"/>
+    <id>blog.codeest.moe/2017/03/29/life-skill-tree/</id>
+    <published>2017-03-29T15:32:49.000Z</published>
+    <updated>2017-03-30T18:10:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一般来说，学习一项技能根据掌握程度大致可以分为三个阶段：了解、熟练、精通，更具体一些来说的话，</p>
+<ul>
+<li>了解 —— 即<code>知道有</code>，处于知道有这么个API，有这么个开源项目，有这种分析方法、解决思路，有这种相关技术、类似问题等等，但实际使用时还需要再去查询的这种阶段。这个阶段可能会被很多人忽略，但是有时多一些了解，让视野变宽广，也就多了一些遇到难题时可选方案，即使只是一些朦胧的印象，偶尔也可以帮你少走弯路。所以平时广泛涉猎一些文章，浏览各类目录，关注新技术与知识，即使没办法立刻记住，也许哪天灵光一闪就能雪中送炭。</li>
+<li>熟练 —— 即<code>熟练用</code>，这个阶段其实可以分为两部分，先充分学习，再亲手实践，最后达到熟练使用某个技能的效果。这是一个相对主力的阶段，能满足我们日常生活所需，同时也需要花费大量时间去积累，我们大部分的技能可能都是停留在这个阶段。</li>
+<li>精通 —— 即<code>懂原理</code>，对于一些重要的，或是有特殊需求的技能，我们还必须懂其原理才可以，原因很简单，懂原理是<b>解决难题</b>时最有效的手段，也是<b>创造该知识的衍生物</b>时的必经之路。比如读了一些FrameWork层的源码，才能在一些复杂场景的debug中游刃有余，了解Dex、ClassLoader相关原理，才能写出热更新与插件化的框架，熟悉RxJava的源码，才能写出RxXXX系列的衍生框架，深入理解JVM，才能做出更深层次的性能优化，所以挑选一些知识或技能去掌握原理是必不可少的。</li>
+</ul>
+<p>下面列出一些自己目前已经掌握的和计划掌握的技能，给自己画一个技能树，理清楚哪些是我现在能做到的，还有哪些事等着我去做，当然精力是有限的，我也不敢保证挖的坑都能填上，只能尽力而为=￣ω￣= 每个条目都是链接，有些是开源项目地址，有些是自己收集的学习资料，或许可以帮到你</p>
+<h1 id="技术Skill"><a href="#技术Skill" class="headerlink" title="技术Skill"></a>技术Skill</h1><h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><ul>
+<li><a href="https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android" target="_blank" rel="external">FrameWork</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="external">RxJava</a> &amp; <a href="https://github.com/ReactiveX/RxAndroid" target="_blank" rel="external">RxAndroid</a></li>
+<li><a href="https://github.com/realm/realm-java" target="_blank" rel="external">Realm</a> &amp; <a href="https://github.com/greenrobot/greenDAO" target="_blank" rel="external">GreenDAO</a></li>
+<li><a href="https://github.com/square/retrofit" target="_blank" rel="external">Retrofit</a> &amp; <a href="https://github.com/square/okhttp" target="_blank" rel="external">OkHttp</a> &amp; <a href="https://github.com/google/volley" target="_blank" rel="external">Volley</a></li>
+<li><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Glide</a> &amp; <a href="https://github.com/facebook/fresco" target="_blank" rel="external">Fresco</a></li>
+<li><a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="external">ButterKnife</a> &amp; <a href="https://github.com/google/dagger" target="_blank" rel="external">Dagger2</a></li>
+<li><a href="http://kotlindoc.com/index.html" target="_blank" rel="external">Kotlin</a> &amp; <a href="https://github.com/LyndonChin/MasteringAndroidDataBinding" target="_blank" rel="external">DataBinding</a></li>
+</ul>
+<h3 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h3><ul>
+<li><a href="http://www.w3school.com.cn/html5/index.asp" target="_blank" rel="external">HTML5</a> &amp; <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started" target="_blank" rel="external">CSS3</a> &amp; <a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="external">ES6</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">React.js</a> &amp; <a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="external">Vue.js</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html" target="_blank" rel="external">Redux</a> &amp; <a href="https://github.com/ruanyf/webpack-demos" target="_blank" rel="external">Webpack</a> &amp; <a href="http://reactnative.cn/docs/0.42/tutorial.html#content" target="_blank" rel="external">React Native</a></li>
+<li><a href="https://www.tslang.cn/docs/handbook/basic-types.html" target="_blank" rel="external">TypeScript</a> &amp; <a href="http://www.w3cplus.com/sassguide/syntax.html" target="_blank" rel="external">SASS</a></li>
+<li><a href="http://materializecss.com/getting-started.html" target="_blank" rel="external">Materialize</a> &amp; <a href="https://github.com/callemall/material-ui" target="_blank" rel="external">material-ui</a></li>
+</ul>
+<h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501579966ab03decb0dd246e1a6799dd653a15e1b000" target="_blank" rel="external">Koa2</a></li>
+<li><a href="http://docs.mongoing.com/manual-zh/core/document.html" target="_blank" rel="external">MongoDB</a></li>
+</ul>
+<h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">Python</a></li>
+<li><a href="http://billie66.github.io/TLCL/book/zh/" target="_blank" rel="external">Shell</a></li>
+</ul>
+<h1 id="生活Skill"><a href="#生活Skill" class="headerlink" title="生活Skill"></a>生活Skill</h1><ul>
+<li>摄影 ：单反 X1（这算是逛漫展的衍生技能么…</li>
+<li>绘画 ：数位板 X1，Pixiv账号 X1 （小学时在课外学过一段时间绘画，估计那时的我都比现在的我画得好，逃~</li>
+<li>PS与视频剪辑 ：Bilibili账号 X1（有些时候真的能用上呢</li>
+<li>做饭 ：锅 X1（不是煮泡面和下速冻水饺的那种= =</li>
+<li>音乐 ：乐器 X1（目前还处于只能玩音游的状态，嘛…</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>一天只有24小时其实根本不够用，不是么</p>
+<blockquote><p>声明：本站所有文章均为原创或翻译，遵循<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>，如需转载请确保您对该协议有足够了解，并附上作者名(Est)及原贴地址</p>
+</blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;嘛…应该说是技能树+计划表，列出自己已经掌握的和计划掌握的技能，不仅限于技术，以后有了新目标也会补在这里&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="blog.codeest.moe/categories/Life/"/>
+    
+    
+      <category term="life" scheme="blog.codeest.moe/tags/life/"/>
+    
+      <category term="skill" scheme="blog.codeest.moe/tags/skill/"/>
+    
+  </entry>
   
   <entry>
     <title>操作符速查索引</title>
@@ -427,9 +493,9 @@
     
       <category term="android" scheme="blog.codeest.moe/tags/android/"/>
     
-      <category term="mvp" scheme="blog.codeest.moe/tags/mvp/"/>
-    
       <category term="rxjava" scheme="blog.codeest.moe/tags/rxjava/"/>
+    
+      <category term="mvp" scheme="blog.codeest.moe/tags/mvp/"/>
     
       <category term="retrofit" scheme="blog.codeest.moe/tags/retrofit/"/>
     
