@@ -683,7 +683,11 @@ blockquote {
         font-weight: 480;
         color: #CCCCCC; }
     #sidebar[data-behavior="1"] ul.sidebar-buttons, #sidebar[data-behavior="3"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="1"] ul.sidebar-buttons li.sidebar-button, #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button {
         text-align: left; }
         #sidebar[data-behavior="1"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link, #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
@@ -802,7 +806,11 @@ blockquote {
         font-weight: 480;
         color: #CCCCCC; }
     #sidebar[data-behavior="3"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button {
         text-align: left; }
         #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
@@ -888,7 +896,11 @@ blockquote {
         font-weight: 480;
         color: #CCCCCC; }
     #sidebar[data-behavior="1"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="1"] ul.sidebar-buttons li.sidebar-button {
         text-align: left; }
         #sidebar[data-behavior="1"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
@@ -972,7 +984,11 @@ blockquote {
         font-weight: 480;
         color: #CCCCCC; }
     #sidebar[data-behavior="3"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button {
         text-align: left; }
         #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
@@ -1060,7 +1076,11 @@ blockquote {
         font-weight: 480;
         color: #DDDDDD; }
     #sidebar[data-behavior="1"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="1"] ul.sidebar-buttons li.sidebar-button {
         text-align: left;
         margin: 0 0 0 10px; }
@@ -1145,7 +1165,11 @@ blockquote {
         font-weight: 480;
         color: #CCCCCC; }
     #sidebar[data-behavior="3"] ul.sidebar-buttons {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 6px;
+      padding-right: 15px;
+      border-radius: 5px; }
       #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button {
         text-align: left; }
         #sidebar[data-behavior="3"] ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
